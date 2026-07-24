@@ -1,0 +1,6 @@
+{
+  "name": "7 Petals Horticulture",
+  "description": "Luxury Landscape Design, Terrace Gardens, Vertical Gardens, Nursery & Horticulture Consultancy",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

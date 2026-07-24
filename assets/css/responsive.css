@@ -1,0 +1,277 @@
+/* ==========================================================================
+   7 PETALS HORTICULTURE PVT. LTD. - RESPONSIVE STYLESHEET
+   Supports Desktop, Laptop, Tablet, Mobile Pixel-Perfect Layouts
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Large Desktop & Ultra-Wide Screens (> 1200px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Laptops & Laptops Standard (992px to 1199px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .section-padding {
+    padding: 90px 0;
+  }
+  
+  .hero-title {
+    font-size: 3.8rem;
+  }
+  
+  .nav-links-wrapper {
+    gap: 20px;
+  }
+  
+  .service-row {
+    gap: 40px;
+  }
+  
+  .service-img-frame {
+    height: 360px;
+  }
+  
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .bento-span-3 {
+    grid-column: span 2;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Tablets (768px to 991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .section-padding {
+    padding: 70px 0;
+  }
+  
+  .nav-links-wrapper {
+    display: none; /* Hide desktop nav menu */
+  }
+  
+  .btn-mobile-toggle {
+    display: flex; /* Show mobile drawer button */
+  }
+  
+  .floating-navbar {
+    padding: 10px 20px;
+  }
+  
+  .hero-section {
+    min-height: 640px;
+  }
+  
+  .hero-title-main,
+  .hero-title-italic {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+  
+  .about-image-stack {
+    margin-bottom: 50px;
+    padding-right: 0;
+  }
+  
+  .bento-row-top,
+  .bento-row-middle,
+  .bento-row-bottom {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-bento-card.card-large,
+  .service-bento-cta-card {
+    min-height: 320px;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-spotlight-card {
+    min-height: 480px;
+  }
+
+  .why-metrics-bar {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .metric-block {
+    flex: 1 1 40%;
+  }
+
+  .metric-block-line {
+    display: none;
+  }
+  
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bento-span-2, .bento-span-3 {
+    grid-column: span 1;
+  }
+  
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stat-item {
+    margin-bottom: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Mobile Devices (Portrait & Landscape <= 767px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .header-wrapper {
+    top: 10px;
+    padding: 0 12px;
+  }
+  
+  .floating-navbar {
+    padding: 8px 16px;
+    width: 100%;
+  }
+
+  .header-scrolled.header-wrapper {
+    top: 0 !important;
+    padding: 0 !important;
+  }
+
+  .header-scrolled .floating-navbar {
+    padding: 10px 16px !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+  }
+
+  .brand-logo-emblem {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .brand-subtitle {
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .brand-title {
+    font-size: 1.05rem;
+  }
+  
+  .section-padding {
+    padding: 50px 0;
+  }
+  
+  .heading-editorial {
+    font-size: 2.1rem;
+  }
+  
+  .hero-title-main,
+  .hero-title-italic {
+    font-size: 2.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-editorial {
+    width: 100%;
+  }
+  
+  .about-img-primary {
+    width: 100%;
+    height: 380px;
+  }
+  
+  .about-img-secondary {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    border: none;
+    margin-top: -60px;
+  }
+  
+  .about-badge-floating {
+    top: 20px;
+    left: 10px;
+    padding: 12px 16px;
+  }
+  
+  .feature-list-editorial {
+    grid-template-columns: 1fr;
+  }
+  
+  .masonry-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-img-wrapper {
+    height: 280px;
+  }
+  
+  .project-card-tall .project-img-wrapper {
+    height: 320px;
+    min-height: auto;
+  }
+  
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-header-custom, .modal-body-custom {
+    padding: 24px;
+  }
+  
+  .contact-cta-banner {
+    padding: 80px 20px;
+  }
+
+  .footer-editorial {
+    padding-top: 60px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Small Mobile Screens (<= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .badge-editorial {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+  }
+  
+  .btn-editorial {
+    padding: 14px 28px;
+    font-size: 0.875rem;
+  }
+}
