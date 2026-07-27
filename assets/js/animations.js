@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveals();
   initAnimatedCounters();
   initHeroParallax();
+  // initServicesParallax();
 });
 
 /* --------------------------------------------------------------------------
@@ -25,7 +26,7 @@ function initCustomCursor() {
   window.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    
+
     // Instant dot position
     dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
   });
@@ -34,7 +35,7 @@ function initCustomCursor() {
     // Smooth lerp movement for circle
     circleX += (mouseX - circleX) * 0.15;
     circleY += (mouseY - circleY) * 0.15;
-    
+
     circle.style.transform = `translate(${circleX}px, ${circleY}px)`;
     requestAnimationFrame(renderCursor);
   }
@@ -136,10 +137,46 @@ function initHeroParallax() {
     const { clientX, clientY } = e;
     const xPos = (clientX / window.innerWidth - 0.5) * 20;
     const yPos = (clientY / window.innerHeight - 0.5) * 20;
-    
+
     const heroContent = document.querySelector('.hero-content-container');
     if (heroContent) {
       heroContent.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
     }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   5. Parallax Effect on Services & CTA Section Background Images
+   -------------------------------------------------------------------------- */
+function initServicesParallax() {
+  const cards = document.querySelectorAll('.service-bento-card, .services-cta-banner');
+  if (cards.length === 0) return;
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px 0px 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      entry.target.isIntersectingCustom = entry.isIntersecting;
+    });
+  }, observerOptions);
+
+  cards.forEach(card => observer.observe(card));
+
+  window.addEventListener('scroll', () => {
+    const windowHeight = window.innerHeight;
+    cards.forEach(card => {
+      if (card.isIntersectingCustom) {
+        const rect = card.getBoundingClientRect();
+        // Calculate a position factor from 0 (top of viewport) to 1 (bottom of viewport)
+        const relativePosition = (rect.top + rect.height / 2) / windowHeight;
+        // Map factor to translation range (e.g. -20px to 20px)
+        const translateY = (relativePosition - 0.5) * 40;
+        card.style.setProperty('--parallax-y', `${translateY}px`);
+      }
+    });
   });
 }
