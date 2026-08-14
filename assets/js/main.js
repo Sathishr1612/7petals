@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFloatingHeader();
   initMobileDrawer();
   initHeroCarousel();
-  initProjectFilters();
+  initProjectsEditorial();
   initGalleryLightbox();
   initTestimonialSlider();
   initFaqAccordion();
@@ -24,13 +24,31 @@ function initFloatingHeader() {
   const headerWrapper = document.querySelector('.header-wrapper');
   if (!headerWrapper) return;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      headerWrapper.classList.add('header-scrolled');
-    } else {
-      headerWrapper.classList.remove('header-scrolled');
+  const SCROLL_THRESHOLD = 80;
+  let isScrolled = false;
+  let ticking = false;
+
+  function updateHeader() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const shouldBeScrolled = scrollY > SCROLL_THRESHOLD;
+
+    if (shouldBeScrolled !== isScrolled) {
+      isScrolled = shouldBeScrolled;
+      if (isScrolled) {
+        headerWrapper.classList.add('header-scrolled');
+      } else {
+        headerWrapper.classList.remove('header-scrolled');
+      }
     }
-  });
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }, { passive: true });
 }
 
 /* --------------------------------------------------------------------------
@@ -87,40 +105,371 @@ function initMobileDrawer() {
 }
 
 /* --------------------------------------------------------------------------
-   3. Featured Projects Category Filtering
+   3. Projects Editorial Portfolio — Interactive Showcase
    -------------------------------------------------------------------------- */
-function initProjectFilters() {
-  const filterBtns = document.querySelectorAll('.project-filters .filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+function initProjectsEditorial() {
+  const section = document.querySelector('.projects-editorial');
+  const imgContainer = document.querySelector('.projects-featured-image-inner');
+  const details = document.getElementById('projects-details');
+  const numEl = document.getElementById('proj-number');
+  const catEl = document.getElementById('proj-category');
+  const titleEl = document.getElementById('proj-title');
+  const metaEl = document.getElementById('proj-meta');
+  const descEl = document.getElementById('proj-desc');
+  const counterEl = document.getElementById('proj-counter');
+  const prevBtn = document.getElementById('proj-prev');
+  const nextBtn = document.getElementById('proj-next');
+  const imgPrevBtn = document.getElementById('img-carousel-prev');
+  const imgNextBtn = document.getElementById('img-carousel-next');
+  const progress = document.getElementById('proj-progress');
+  const selectors = document.querySelectorAll('.project-selector');
+  const imageWrap = document.querySelector('.projects-featured-image-wrap');
 
-  if (filterBtns.length === 0 || projectCards.length === 0) return;
+  if (!section || !imgContainer) return;
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Toggle active class on buttons
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  const projects = [
+    {
+      num: '01',
+      category: 'CORPORATE & COMMERCIAL LANDSCAPES',
+      title: 'Corporate & Commercial Landscapes',
+      location: 'OMR IT Corridor, Chennai',
+      desc: 'Professional landscape design and greenery solutions for offices, business parks, commercial properties, and corporate campuses, creating welcoming and functional outdoor environments.',
+      images: [
+        'assets/images/new-images/7petals-nice-garden.webp',
+        'assets/images/new-images/7petals.webp',
+        'assets/images/new-images/hero-7-petals-1.webp'
+      ],
+      alt: 'Corporate Green Campus'
+    },
+    {
+      num: '02',
+      category: 'RESIDENTIAL & VILLA LANDSCAPING',
+      title: 'Residential & Villa Landscaping',
+      location: 'Jubilee Hills, Hyderabad',
+      desc: 'Custom landscape and garden designs for villas, homes, and residential communities, combining aesthetics, greenery, and practical outdoor living.',
+      images: [
+        'assets/images/new-images/hero-2.webp',
+        'assets/images/new-images/house.webp',
+        'assets/images/7petals-projects/rustomjee-crown-apart.webp'
+      ],
+      alt: 'Luxury Residential Landscape'
+    },
+    {
+      num: '03',
+      category: 'INDUSTRIAL LANDSCAPING',
+      title: 'Industrial Landscaping',
+      location: 'Sriperumbudur, Chennai',
+      desc: 'Sustainable and low-maintenance landscaping solutions for industrial campuses, large facilities, and infrastructure developments.',
+      images: [
+        'assets/images/new-images/landscape-designer.webp',
+        'assets/images/new-images/horticultural-consultancy.webp',
+        'assets/images/new-images/nice-garden.webp'
+      ],
+      alt: 'Eco-Friendly Industrial Park'
+    },
+    {
+      num: '04',
+      category: 'TERRACE & ROOFTOP GARDENS',
+      title: 'Terrace & Rooftop Gardens',
+      location: 'Nungambakkam, Chennai',
+      desc: 'Transforming unused terraces and rooftops into beautiful green spaces with thoughtful planting, garden features, and functional outdoor areas.',
+      images: [
+        'assets/images/new-images/terrace-gardens.webp',
+        'assets/images/7petals-projects/rustomjee-crown-water.webp',
+        'assets/images/7petals-projects/piraml-garden.webp'
+      ],
+      alt: 'Premium Terrace Garden'
+    },
+    {
+      num: '05',
+      category: 'VERTICAL & GREEN WALLS',
+      title: 'Vertical & Green Walls',
+      location: 'Whitefield, Bangalore',
+      desc: 'Innovative vertical gardens and living green walls that integrate greenery into modern buildings, facades, offices, and urban spaces.',
+      images: [
+        'assets/images/new-images/vertical-gardens-designer.webp',
+        'assets/images/7petals-projects/rustomjee-khar-design.webp',
+        'assets/images/7petals-projects/rustomjee.webp'
+      ],
+      alt: 'Vertical Green Wall'
+    },
+    {
+      num: '06',
+      category: 'INSTITUTIONAL LANDSCAPING',
+      title: 'Institutional Landscaping',
+      location: 'Anna University, Chennai',
+      desc: 'Planned landscaping solutions for schools, colleges, healthcare facilities, and other institutions that enhance their surroundings and create healthier outdoor spaces.',
+      images: [
+        'assets/images/new-images/school.webp',
+        'assets/images/7petals-projects/godrej-garden.webp',
+        'assets/images/7petals-projects/piramal-vaikunth.webp'
+      ],
+      alt: 'University Campus Greens'
+    },
+    {
+      num: '07',
+      category: 'GARDEN REDEVELOPMENT',
+      title: 'Garden Redevelopment',
+      location: 'Mysore, Karnataka',
+      desc: 'Revitalising existing gardens through improved landscape layouts, fresh planting, hardscape elements, and sustainable greenery solutions.',
+      images: [
+        'assets/images/new-images/garden-designer.webp',
+        'assets/images/new-images/nature.webp',
+        'assets/images/7petals-projects/kilbill-bungalow.webp'
+      ],
+      alt: 'Heritage Garden Restoration'
+    },
+    {
+      num: '08',
+      category: 'TREE TRANSPLANTATION',
+      title: 'Tree Transplantation',
+      location: 'Outer Ring Road, Hyderabad',
+      desc: 'Professional tree transplantation solutions focused on carefully relocating and preserving mature trees during construction, redevelopment, and landscape projects.',
+      images: [
+        'assets/images/new-images/tree-transplanting-services.webp',
+        'assets/images/7petals-projects/godrej-tree.webp',
+        'assets/images/7petals-projects/rustomjee-khar-tree.webp'
+      ],
+      alt: 'Tree Transplantation Project'
+    }
+  ];
 
-      const filterValue = btn.getAttribute('data-filter');
+  let currentProjectIndex = 0;
+  let currentImageIndex = 0;
+  let isAnimatingProject = false;
+  let carouselInterval = null;
+  let imageElements = [];
+  let isHovered = false;
 
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filterValue === 'all' || category === filterValue) {
-          card.style.display = 'block';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'scale(1)';
-          }, 50);
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'scale(0.95)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 300);
-        }
-      });
+  const totalProjects = projects.length;
+  const DISPLAY_TIME = 4500;
+  const TRANSITION_TIME = 1200; // Matches css transition
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Render images for the given project
+  function renderProjectImages(projectIndex) {
+    // Clear existing contents (including the static placeholder image if present)
+    imgContainer.innerHTML = '';
+
+    imageElements = [];
+    const proj = projects[projectIndex];
+
+    proj.images.forEach((src, i) => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = `${proj.alt} - Image ${i + 1}`;
+      img.className = 'projects-carousel-img';
+      if (i === 0) img.classList.add('active');
+      imgContainer.appendChild(img);
+      imageElements.push(img);
     });
+
+    currentImageIndex = 0;
+  }
+
+  function advanceCarousel() {
+    if (isHovered || imageElements.length <= 1 || isAnimatingProject || reducedMotion) return;
+
+    const prevIndex = currentImageIndex;
+    currentImageIndex = (currentImageIndex + 1) % imageElements.length;
+
+    imageElements[prevIndex].classList.remove('active');
+    imageElements[currentImageIndex].classList.add('active');
+  }
+
+  function advanceCarouselManual() {
+    if (imageElements.length <= 1 || isAnimatingProject) return;
+    const prevIndex = currentImageIndex;
+    currentImageIndex = (currentImageIndex + 1) % imageElements.length;
+    imageElements[prevIndex].classList.remove('active');
+    imageElements[currentImageIndex].classList.add('active');
+    startCarousel(); // Restart timer
+  }
+
+  function previousCarouselManual() {
+    if (imageElements.length <= 1 || isAnimatingProject) return;
+    const prevIndex = currentImageIndex;
+    currentImageIndex = (currentImageIndex - 1 + imageElements.length) % imageElements.length;
+    imageElements[prevIndex].classList.remove('active');
+    imageElements[currentImageIndex].classList.add('active');
+    startCarousel(); // Restart timer
+  }
+
+  function startCarousel() {
+    stopCarousel();
+    if (imageElements.length > 1 && !reducedMotion) {
+      carouselInterval = setInterval(advanceCarousel, DISPLAY_TIME);
+    }
+  }
+
+  function stopCarousel() {
+    if (carouselInterval) {
+      clearInterval(carouselInterval);
+      carouselInterval = null;
+    }
+  }
+
+  function updateProgress(index) {
+    if (!progress) return;
+    const pct = ((index + 1) / totalProjects) * 100;
+    progress.style.width = pct + '%';
+  }
+
+  function updateSelectors(index) {
+    selectors.forEach((btn, i) => {
+      btn.classList.toggle('active', i === index);
+      btn.setAttribute('aria-selected', i === index ? 'true' : 'false');
+    });
+    if (selectors[index]) {
+      selectors[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  }
+
+  function switchProject(index) {
+    if (isAnimatingProject || index === currentProjectIndex) return;
+    isAnimatingProject = true;
+    stopCarousel();
+
+    const proj = projects[index];
+
+    if (reducedMotion) {
+      renderProjectImages(index);
+      numEl.textContent = proj.num;
+      catEl.textContent = proj.category;
+      titleEl.textContent = proj.title;
+      metaEl.innerHTML = `<i class="bi bi-geo-alt"></i> ${proj.location}`;
+      descEl.textContent = proj.desc;
+      counterEl.textContent = `${proj.num} / 0${totalProjects}`;
+      currentProjectIndex = index;
+      updateProgress(index);
+      updateSelectors(index);
+      isAnimatingProject = false;
+      return;
+    }
+
+    // Fade text out and current images out
+    details.classList.add('is-transitioning');
+    imageElements.forEach(img => img.classList.add('is-transitioning'));
+
+    setTimeout(() => {
+      renderProjectImages(index);
+
+      numEl.textContent = proj.num;
+      catEl.textContent = proj.category;
+      titleEl.textContent = proj.title;
+      metaEl.innerHTML = `<i class="bi bi-geo-alt"></i> ${proj.location}`;
+      descEl.textContent = proj.desc;
+      counterEl.textContent = `${proj.num} / 0${totalProjects}`;
+
+      currentProjectIndex = index;
+      updateProgress(index);
+      updateSelectors(index);
+
+      // Force reflow
+      void imgContainer.offsetWidth;
+
+      // Fade back in
+      details.classList.remove('is-transitioning');
+
+      setTimeout(() => {
+        isAnimatingProject = false;
+        startCarousel();
+      }, 650);
+    }, 480);
+  }
+
+  // Initial render
+  renderProjectImages(0);
+
+  // Hover events
+  const hoverTarget = imageWrap || imgContainer;
+  hoverTarget.addEventListener('mouseenter', () => { isHovered = true; });
+  hoverTarget.addEventListener('mouseleave', () => { isHovered = false; });
+
+  // Touch swipe events on mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  imgContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopCarousel();
+  }, { passive: true });
+
+  imgContainer.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+    startCarousel();
+  }, { passive: true });
+
+  function handleSwipe() {
+    if (imageElements.length <= 1) return;
+    const threshold = 50;
+    if (touchEndX < touchStartX - threshold) {
+      // Swipe left (next image)
+      advanceCarousel();
+    } else if (touchEndX > touchStartX + threshold) {
+      // Swipe right (prev image)
+      const prevIndex = currentImageIndex;
+      currentImageIndex = (currentImageIndex - 1 + imageElements.length) % imageElements.length;
+      imageElements[prevIndex].classList.remove('active');
+      imageElements[currentImageIndex].classList.add('active');
+    }
+  }
+
+  // Selector clicks
+  selectors.forEach((btn, i) => {
+    btn.addEventListener('click', () => switchProject(i));
   });
+
+  // Image Carousel Prev / Next Buttons
+  if (imgPrevBtn) {
+    imgPrevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      previousCarouselManual();
+    });
+  }
+
+  if (imgNextBtn) {
+    imgNextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      advanceCarouselManual();
+    });
+  }
+
+  // Prev / Next Project Buttons
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      const idx = (currentProjectIndex - 1 + totalProjects) % totalProjects;
+      switchProject(idx);
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      const idx = (currentProjectIndex + 1) % totalProjects;
+      switchProject(idx);
+    });
+  }
+
+  // Keyboard nav when section is in focus
+  section.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') switchProject((currentProjectIndex + 1) % totalProjects);
+    if (e.key === 'ArrowLeft') switchProject((currentProjectIndex - 1 + totalProjects) % totalProjects);
+  });
+
+  // Section entry animation via IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        section.classList.add('projects-visible');
+        startCarousel(); // Start carousel only when visible
+        observer.unobserve(section);
+      }
+    });
+  }, { threshold: 0.12 });
+  observer.observe(section);
+
+  updateProgress(0);
 }
 
 /* --------------------------------------------------------------------------
@@ -409,7 +758,7 @@ function initScrollAnimations() {
     // Add staggered cascade for grid siblings
     const parent = el.parentElement;
     if (parent) {
-      const siblings = Array.from(parent.children).filter(child => 
+      const siblings = Array.from(parent.children).filter(child =>
         child.classList.contains('reveal-up') || child.classList.contains('reveal-scale')
       );
       const childIndex = siblings.indexOf(el);

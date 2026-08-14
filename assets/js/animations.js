@@ -180,3 +180,9 @@ function initServicesParallax() {
     });
   });
 }
+
+/* --------------------------------------------------------------------------
+   6. About Section
+   (Animation is now handled entirely via CSS infinite vertical loop)
+   -------------------------------------------------------------------------- */
+
