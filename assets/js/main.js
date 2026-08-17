@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroCarousel();
   initProjectsEditorial();
   initGalleryLightbox();
+  initGalleryFilters();
   initTestimonialSlider();
   initFaqAccordion();
   initConsultationModal();
@@ -480,7 +481,7 @@ let currentLightboxIndex = 0;
 let galleryItemsData = [];
 
 function initGalleryLightbox() {
-  const galleryCards = document.querySelectorAll('.gallery-card-item');
+  const galleryCards = document.querySelectorAll('.gallery-item');
   const lightboxOverlay = document.getElementById('lightboxModal');
   const lightboxImg = document.getElementById('lightboxImage');
   const lightboxCaption = document.getElementById('lightboxCaption');
@@ -492,13 +493,12 @@ function initGalleryLightbox() {
 
   // Store data
   galleryCards.forEach((card, index) => {
-    const img = card.querySelector('img');
-    const title = card.querySelector('.project-title')?.textContent || '7 Petals Landscape Project';
-    const tag = card.querySelector('.project-tag')?.textContent || 'Horticulture Design';
+    const img = card.querySelector('.gallery-img');
+    const title = card.querySelector('.gallery-title')?.textContent || '7 Petals Landscape Project';
 
     galleryItemsData.push({
       src: img ? img.src : '',
-      title: `${title} — ${tag}`
+      title: title
     });
 
     card.addEventListener('click', (e) => {
@@ -968,3 +968,35 @@ function initHeroCarousel() {
   startAutoPlay();
 }
 
+/* --------------------------------------------------------------------------
+   13. Gallery Filters
+   -------------------------------------------------------------------------- */
+function initGalleryFilters() {
+  const filterBtns = document.querySelectorAll('.gallery-filters .filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-grid .gallery-item');
+
+  if (!filterBtns.length || !galleryItems.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active from all
+      filterBtns.forEach(b => b.classList.remove('active'));
+      // Add active to clicked
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      galleryItems.forEach(item => {
+        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+          item.style.display = ''; // Reset display
+          // Slight animation reset
+          item.style.animation = 'none';
+          void item.offsetWidth; 
+          item.style.animation = 'reveal-up 0.5s ease forwards';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+}
