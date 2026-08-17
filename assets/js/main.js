@@ -136,9 +136,9 @@ function initProjectsEditorial() {
       location: 'OMR IT Corridor, Chennai',
       desc: 'Professional landscape design and greenery solutions for offices, business parks, commercial properties, and corporate campuses, creating welcoming and functional outdoor environments.',
       images: [
-        'assets/images/7petals-projects/godrej-tree.webp  ',
-        'assets/images/new-images/7petals.webp',
-        'assets/images/new-images/hero-7-petals-1.webp'
+        'assets/images/7petals-projects/godrej-tree.webp',
+        'assets/images/7petals-projects/garden-office-place.webp',
+        'assets/images/7petals-projects/garden-projects-office.webp'
       ],
       alt: 'Corporate Green Campus'
     },
@@ -149,8 +149,8 @@ function initProjectsEditorial() {
       location: 'Jubilee Hills, Hyderabad',
       desc: 'Custom landscape and garden designs for villas, homes, and residential communities, combining aesthetics, greenery, and practical outdoor living.',
       images: [
-        'assets/images/new-images/hero-2.webp',
-        'assets/images/new-images/house.webp',
+        'assets/images/7petals-projects/house-design.webp',
+        'assets/images/7petals-projects/kilbill-bungalow.webp',
         'assets/images/7petals-projects/rustomjee-crown-apart.webp'
       ],
       alt: 'Luxury Residential Landscape'
@@ -162,9 +162,9 @@ function initProjectsEditorial() {
       location: 'Sriperumbudur, Chennai',
       desc: 'Sustainable and low-maintenance landscaping solutions for industrial campuses, large facilities, and infrastructure developments.',
       images: [
-        'assets/images/new-images/landscape-designer.webp',
-        'assets/images/new-images/horticultural-consultancy.webp',
-        'assets/images/new-images/nice-garden.webp'
+        'assets/images/7petals-projects/piramal-vaikunth.webp',
+        'assets/images/7petals-projects/garden-park.webp',
+        'assets/images/7petals-projects/garden-place.webp'
       ],
       alt: 'Eco-Friendly Industrial Park'
     },
@@ -175,9 +175,9 @@ function initProjectsEditorial() {
       location: 'Nungambakkam, Chennai',
       desc: 'Transforming unused terraces and rooftops into beautiful green spaces with thoughtful planting, garden features, and functional outdoor areas.',
       images: [
-        'assets/images/new-images/terrace-gardens.webp',
         'assets/images/7petals-projects/rustomjee-crown-water.webp',
-        'assets/images/7petals-projects/piraml-garden.webp'
+        'assets/images/7petals-projects/piraml-garden.webp',
+        'assets/images/7petals-projects/rustomjee-crown-apartment.webp'
       ],
       alt: 'Premium Terrace Garden'
     },
@@ -188,7 +188,7 @@ function initProjectsEditorial() {
       location: 'Whitefield, Bangalore',
       desc: 'Innovative vertical gardens and living green walls that integrate greenery into modern buildings, facades, offices, and urban spaces.',
       images: [
-        'assets/images/new-images/vertical-gardens-designer.webp',
+        'assets/images/7petals-projects/piramal-vaikunth-vertical.webp',
         'assets/images/7petals-projects/rustomjee-khar-design.webp',
         'assets/images/7petals-projects/rustomjee.webp'
       ],
@@ -201,9 +201,9 @@ function initProjectsEditorial() {
       location: 'Anna University, Chennai',
       desc: 'Planned landscaping solutions for schools, colleges, healthcare facilities, and other institutions that enhance their surroundings and create healthier outdoor spaces.',
       images: [
-        'assets/images/new-images/school.webp',
         'assets/images/7petals-projects/godrej-garden.webp',
-        'assets/images/7petals-projects/piramal-vaikunth.webp'
+        'assets/images/7petals-projects/nursery.webp',
+        'assets/images/7petals-projects/rustomjee-crown-design.webp'
       ],
       alt: 'University Campus Greens'
     },
@@ -214,9 +214,9 @@ function initProjectsEditorial() {
       location: 'Mysore, Karnataka',
       desc: 'Revitalising existing gardens through improved landscape layouts, fresh planting, hardscape elements, and sustainable greenery solutions.',
       images: [
-        'assets/images/new-images/garden-designer.webp',
-        'assets/images/new-images/nature.webp',
-        'assets/images/7petals-projects/kilbill-bungalow.webp'
+        'assets/images/7petals-projects/garden-projects-flowers.webp',
+        'assets/images/7petals-projects/kilbill-bungalow.webp',
+        'assets/images/7petals-projects/rustomjee-khar.webp'
       ],
       alt: 'Heritage Garden Restoration'
     },
@@ -227,7 +227,7 @@ function initProjectsEditorial() {
       location: 'Outer Ring Road, Hyderabad',
       desc: 'Professional tree transplantation solutions focused on carefully relocating and preserving mature trees during construction, redevelopment, and landscape projects.',
       images: [
-        'assets/images/new-images/tree-transplanting-services.webp',
+        'assets/images/7petals-projects/godrej-tree-hero.jpg',
         'assets/images/7petals-projects/godrej-tree.webp',
         'assets/images/7petals-projects/rustomjee-khar-tree.webp'
       ],
