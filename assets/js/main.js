@@ -137,9 +137,9 @@ function initProjectsEditorial() {
       location: 'OMR IT Corridor, Chennai',
       desc: 'Professional landscape design and greenery solutions for offices, business parks, commercial properties, and corporate campuses, creating welcoming and functional outdoor environments.',
       images: [
-        'assets/images/7petals-projects/godrej-tree.webp',
         'assets/images/7petals-projects/garden-office-place.webp',
-        'assets/images/7petals-projects/garden-projects-office.webp'
+        'assets/images/7petals-projects/garden-projects-office.webp',
+        'assets/images/7petals-projects/godrej-tree.webp'
       ],
       alt: 'Corporate Green Campus'
     },

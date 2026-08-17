@@ -2677,7 +2677,7 @@ img {
 
 .services-eyebrow {
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   color: #A8368C;
@@ -3176,7 +3176,6 @@ img {
    10. Why Choose 7 Petals (Luxury Distinction Showcase)
    -------------------------------------------------------------------------- */
 .why-choose-section {
-  background: #F4F3EE;
   position: relative;
 }
 
@@ -3678,11 +3677,11 @@ img {
 
 .clients-marquee-label {
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(27, 27, 27, 0.8);
+  color: rgba(139, 5, 151, 0.8);
   text-align: center;
   margin-bottom: 35px;
 }
@@ -4028,6 +4027,26 @@ img {
 .btn-footer-wa:hover {
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+.btn-footer-fb:hover {
+  background: linear-gradient(135deg, #1877F2 0%, #0d47a1 100%);
+  box-shadow: 0 6px 18px rgba(24, 119, 242, 0.45);
+}
+
+.btn-footer-in:hover {
+  background: linear-gradient(135deg, #0077B5 0%, #004182 100%);
+  box-shadow: 0 6px 18px rgba(0, 119, 181, 0.45);
+}
+
+.btn-footer-yt:hover {
+  background: linear-gradient(135deg, #FF0000 0%, #B30000 100%);
+  box-shadow: 0 6px 18px rgba(255, 0, 0, 0.45);
+}
+
+.btn-footer-globe:hover {
+  background: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-dark) 100%);
+  box-shadow: 0 6px 18px rgba(16, 139, 55, 0.45);
 }
 
 /* Subtle Vertical Column Dividers on Desktop */
@@ -4413,7 +4432,7 @@ img {
 
 /* ---- Section wrapper ---- */
 .projects-editorial {
-  background-color: var(--bg-main);
+  background-color: var(--bg-section);
   overflow: hidden;
 }
 
@@ -4819,85 +4838,85 @@ img {
 
 .project-selector {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  padding: 8px 12px;
-  border: none;
-  background: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--radius-pill);
   cursor: pointer;
   text-align: left;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   flex: 0 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
-/* Subtle active accent indicator */
+/* Subtle active accent indicator disabled since we use full pill colors now */
 .project-selector::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 12px;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--brand-magenta), var(--brand-green));
-  transition: width 0.35s ease;
-  border-radius: 2px;
-}
-
-.project-selector.active::after {
-  width: 24px;
+  display: none;
 }
 
 .project-selector .sel-num {
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--text-light);
-  transition: color 0.25s ease;
+  letter-spacing: 0.05em;
+  color: var(--brand-magenta);
+  background: rgba(168, 54, 140, 0.08);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  transition: all 0.3s ease;
+  line-height: 1;
 }
 
 .project-selector .sel-name {
   font-size: 13px;
   font-weight: 500;
-  color: var(--text-light);
-  transition: color 0.25s ease;
-  line-height: 1.35;
-  white-space: normal;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 /* Hover Effects */
 .project-selector:hover {
-  transform: translateY(-2px);
-}
-
-.project-selector:hover .sel-num,
-.project-selector.active .sel-num {
-  color: var(--brand-magenta);
+  transform: translateY(-3px);
+  border-color: var(--brand-magenta);
+  background: var(--white);
+  box-shadow: 0 8px 20px rgba(168, 54, 140, 0.08);
 }
 
 .project-selector:hover .sel-name {
   color: var(--text-primary);
 }
 
-.project-selector.active .sel-name {
-  color: var(--text-primary);
-  font-weight: 700;
+.project-selector:hover .sel-num {
+  background: rgba(168, 54, 140, 0.15);
 }
 
-@media (max-width: 600px) {
-  .project-selector {
-    padding: 6px 10px;
-    gap: 3px;
-    width: 140px;
-  }
+/* Active State */
+.project-selector.active {
+  background: linear-gradient(135deg, var(--brand-magenta), var(--brand-orchid));
+  border-color: transparent;
+  box-shadow: 0 8px 24px rgba(168, 54, 140, 0.25);
+}
 
-  .project-selector .sel-num {
-    font-size: 10px;
-  }
+.project-selector.active .sel-num {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.22);
+}
 
-  .project-selector .sel-name {
-    font-size: 12px;
+.project-selector.active .sel-name {
+  color: var(--white);
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .projects-navigation-wrap {
+    display: none !important;
   }
 }
 
