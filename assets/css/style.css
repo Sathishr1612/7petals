@@ -4481,7 +4481,7 @@ img {
 .projects-featured-image-wrap {
   position: relative;
   border-radius: 28px;
-  overflow: hidden;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.14), 0 8px 24px rgba(0, 0, 0, 0.07);
 }
 
 .projects-featured-image-inner {
@@ -4489,8 +4489,11 @@ img {
   width: 100%;
   aspect-ratio: 16 / 11;
   height: auto;
-  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.14), 0 8px 24px rgba(0, 0, 0, 0.07);
   background-color: #000;
+  border-radius: inherit;
+  overflow: hidden;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .projects-carousel-img {
@@ -4501,6 +4504,7 @@ img {
   height: 100%;
   object-fit: cover;
   opacity: 0;
+  border-radius: inherit;
   transform: scale(1.05);
   transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.2s ease-in-out;
   z-index: 0;
@@ -4901,7 +4905,6 @@ img {
 .project-selector.active {
   background: linear-gradient(135deg, var(--brand-magenta), var(--brand-orchid));
   border-color: transparent;
-  box-shadow: 0 8px 24px rgba(168, 54, 140, 0.25);
 }
 
 .project-selector.active .sel-num {
