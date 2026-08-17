@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initNewsletterForm();
   initScrollAnimations();
+  initAboutVisualReveal();
 });
 
 /* --------------------------------------------------------------------------
@@ -135,7 +136,7 @@ function initProjectsEditorial() {
       location: 'OMR IT Corridor, Chennai',
       desc: 'Professional landscape design and greenery solutions for offices, business parks, commercial properties, and corporate campuses, creating welcoming and functional outdoor environments.',
       images: [
-        'assets/images/new-images/7petals-nice-garden.webp',
+        'assets/images/7petals-projects/godrej-tree.webp  ',
         'assets/images/new-images/7petals.webp',
         'assets/images/new-images/hero-7-petals-1.webp'
       ],
@@ -786,6 +787,25 @@ function initScrollAnimations() {
   document.querySelectorAll('.reveal-up, .reveal-scale, .reveal-left, .reveal-right').forEach(el => {
     observer.observe(el);
   });
+}
+
+/* --------------------------------------------------------------------------
+   11b. About Visual Reveal (Custom 3-part animation)
+   -------------------------------------------------------------------------- */
+function initAboutVisualReveal() {
+  const aboutVisual = document.getElementById('about-visual');
+  if (!aboutVisual) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+
+  observer.observe(aboutVisual);
 }
 
 /* --------------------------------------------------------------------------
