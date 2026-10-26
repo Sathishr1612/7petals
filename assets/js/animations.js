@@ -53,14 +53,14 @@ function initCustomCursor() {
    2. Intersection Observer Scroll Reveal
    -------------------------------------------------------------------------- */
 function initScrollReveals() {
-  const revealElements = document.querySelectorAll('.reveal-on-scroll, .reveal-left, .reveal-right, .reveal-zoom');
+  const revealElements = document.querySelectorAll('.reveal-on-scroll, .reveal-left, .reveal-right, .reveal-zoom, .reveal-scale');
 
   if (revealElements.length === 0) return;
 
   const observerOptions = {
     root: null,
-    rootMargin: '0px 0px -80px 0px',
-    threshold: 0.12
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.08
   };
 
   const observer = new IntersectionObserver((entries, obs) => {
@@ -72,8 +72,19 @@ function initScrollReveals() {
     });
   }, observerOptions);
 
-  revealElements.forEach(el => observer.observe(el));
+  revealElements.forEach(el => {
+    // If element is already in viewport, reveal immediately
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('is-revealed');
+    } else {
+      observer.observe(el);
+    }
+  });
 }
+
+document.addEventListener('componentsLoaded', initScrollReveals);
+window.initScrollReveals = initScrollReveals;
 
 /* --------------------------------------------------------------------------
    3. Animated Counter Numbers
@@ -185,4 +196,6 @@ function initServicesParallax() {
    6. About Section
    (Animation is now handled entirely via CSS infinite vertical loop)
    -------------------------------------------------------------------------- */
+
+window.initCustomCursor = initCustomCursor;
 

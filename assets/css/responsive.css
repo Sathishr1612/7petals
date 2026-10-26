@@ -330,3 +330,147 @@
     font-size: 0.78rem;
   }
 }
+/* ==========================================================================
+   Header refinements — larger logo + type, consistent CTA, smoother motion.
+   (Last in the cascade so it wins over the older header rules.)
+   ========================================================================== */
+@keyframes header-drop-in {
+  from { opacity: 0; transform: translateY(-22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes nav-item-rise {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dropdown-card-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.floating-navbar { animation: header-drop-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
+.nav-links-wrapper > * { animation: nav-item-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
+.nav-links-wrapper > *:nth-child(1) { animation-delay: 0.15s; }
+.nav-links-wrapper > *:nth-child(2) { animation-delay: 0.2s; }
+.nav-links-wrapper > *:nth-child(3) { animation-delay: 0.25s; }
+.nav-links-wrapper > *:nth-child(4) { animation-delay: 0.3s; }
+.nav-links-wrapper > *:nth-child(5) { animation-delay: 0.35s; }
+.nav-links-wrapper > *:nth-child(6) { animation-delay: 0.4s; }
+.nav-links-wrapper > *:nth-child(7) { animation-delay: 0.45s; }
+
+/* CTA: same brand gradient before and after scroll, with a light sweep on hover */
+.header-wrapper .btn-editorial-cta {
+  background: linear-gradient(135deg, #A8368C 0%, #C05B9E 55%, #108B37 100%);
+  background-size: 220% 220%;
+  background-position: left center;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 8px 22px rgba(168, 54, 140, 0.4);
+  white-space: nowrap;
+}
+
+.header-wrapper .btn-editorial-cta::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+
+.header-wrapper .btn-editorial-cta:hover::after { left: 130%; }
+
+/* Services dropdown: invisible bridge so it doesn't close while the pointer crosses the gap */
+.professional-services-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 0;
+  right: 0;
+  height: 28px;
+}
+
+.nav-item-dropdown:focus-within .professional-services-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(6px);
+  pointer-events: auto;
+}
+
+.nav-item-dropdown:focus-within .nav-arrow-icon { transform: rotate(180deg); }
+
+.nav-item-dropdown:hover .dropdown-card,
+.nav-item-dropdown:focus-within .dropdown-card { animation: dropdown-card-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
+.nav-item-dropdown:hover .col-lg-6:nth-child(2) .dropdown-card { animation-delay: 0.04s; }
+.nav-item-dropdown:hover .col-lg-6:nth-child(3) .dropdown-card { animation-delay: 0.08s; }
+.nav-item-dropdown:hover .col-lg-6:nth-child(4) .dropdown-card { animation-delay: 0.12s; }
+.nav-item-dropdown:hover .col-lg-6:nth-child(5) .dropdown-card { animation-delay: 0.16s; }
+.nav-item-dropdown:hover .col-lg-6:nth-child(6) .dropdown-card { animation-delay: 0.2s; }
+.nav-item-dropdown:hover .col-lg-12 .dropdown-card { animation-delay: 0.24s; }
+
+.nav-link-custom:focus-visible,
+.btn-editorial-cta:focus-visible,
+.btn-mobile-toggle:focus-visible {
+  outline: 2px solid #C05B9E;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* ---- Desktop sizing (fluid) ---- */
+@media (min-width: 992px) {
+  .floating-navbar {
+    width: 94%;
+    max-width: 1400px;
+    padding: 12px clamp(20px, 2.2vw, 36px);
+  }
+
+  .brand-logo-img {
+    height: clamp(54px, 4vw, 78px);
+    max-width: 320px;
+  }
+
+  .nav-links-wrapper { gap: clamp(14px, 1.9vw, 38px); }
+
+  .nav-link-custom {
+    font-size: clamp(0.84rem, 0.5rem + 0.38vw, 1rem);
+    font-weight: 600;
+    padding: 10px 4px;
+  }
+
+  .nav-link-custom::after { bottom: 4px; }
+
+  .header-wrapper .btn-editorial-cta {
+    font-size: clamp(0.72rem, 0.5rem + 0.25vw, 0.84rem);
+    padding: 11px 14px 11px 22px;
+    gap: 12px;
+    letter-spacing: 0.08em;
+  }
+
+  .header-wrapper .cta-arrow-circle {
+    width: 28px;
+    height: 28px;
+    font-size: 1.05rem;
+  }
+
+  .header-scrolled .floating-navbar { padding: 10px 4%; }
+  .header-scrolled .brand-logo-img { height: clamp(50px, 3.4vw, 66px); }
+}
+
+/* ---- Tablet / mobile sizing ---- */
+@media (max-width: 991px) {
+  .brand-logo-img { height: 58px; max-width: 220px; }
+}
+
+@media (max-width: 480px) {
+  .brand-logo-img { height: 50px; max-width: 190px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-navbar,
+  .nav-links-wrapper > *,
+  .nav-item-dropdown .dropdown-card { animation: none !important; }
+}

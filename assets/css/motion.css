@@ -1,0 +1,53 @@
+/* ==========================================================================
+   7 Petals motion layer. Animation only: nothing here changes layout, colour or content.
+   Hidden states exist only while JS has tagged an element (.mo); without JS everything stays visible.
+   ========================================================================== */
+html, body { overflow-x: clip; }
+
+/* ---- scroll reveals ---- */
+html.mo-on .mo {
+  opacity: 0;
+  transition: opacity 0.85s cubic-bezier(0.22, 0.61, 0.36, 1) var(--mo-d, 0s),
+              transform 0.85s cubic-bezier(0.22, 0.61, 0.36, 1) var(--mo-d, 0s);
+  will-change: opacity, transform;
+}
+html.mo-on .mo[data-mo-dir="up"]    { transform: translate3d(0, 28px, 0); }
+html.mo-on .mo[data-mo-dir="down"]  { transform: translate3d(0, -24px, 0); }
+html.mo-on .mo[data-mo-dir="left"]  { transform: translate3d(-34px, 0, 0); }
+html.mo-on .mo[data-mo-dir="right"] { transform: translate3d(34px, 0, 0); }
+html.mo-on .mo[data-mo-dir="scale"] { transform: translate3d(0, 22px, 0) scale(0.97); }
+html.mo-on .mo.mo-in { opacity: 1; transform: none; }
+
+/* ---- hero entrance on inner pages (pure CSS, ends at the normal design) ---- */
+@keyframes mo-up   { from { opacity: 0; transform: translate3d(0, 26px, 0); } to { opacity: 1; transform: none; } }
+@keyframes mo-down { from { opacity: 0; transform: translate3d(0, -18px, 0); } to { opacity: 1; transform: none; } }
+@keyframes mo-fade { from { opacity: 0; } to { opacity: 1; } }
+.about-page-hero .about-page-hero-bg,
+.about-page-hero > img { animation: mo-fade 1.3s ease-out both; }
+.about-page-hero .inner-breadcrumb { animation: mo-down 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.05s both; }
+.about-page-hero .heading-editorial,
+.about-page-hero h1 { animation: mo-up 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.15s both; }
+.about-page-hero .about-hero-subtitle { animation: mo-up 0.85s cubic-bezier(0.22, 0.61, 0.36, 1) 0.32s both; }
+.about-page-hero .about-hero-ctas { animation: mo-up 0.85s cubic-bezier(0.22, 0.61, 0.36, 1) 0.46s both; }
+
+/* ---- small interactions ---- */
+.btn-editorial { transition-property: transform, box-shadow, background-color, color, border-color, padding; transition-duration: 0.25s; }
+.btn-editorial:hover { transform: translateY(-2px); }
+.btn-editorial:active { transform: translateY(0) scale(0.98); }
+.btn-editorial i { transition: transform 0.25s ease; }
+.btn-editorial:hover .bi-arrow-right,
+.btn-editorial:hover .bi-arrow-up-right { transform: translateX(4px); }
+.btn-editorial:focus-visible, .mega-item:focus-visible { outline: 2px solid #a8368c; outline-offset: 3px; }
+
+/* ---- reduced motion: everything simply appears ---- */
+@media (prefers-reduced-motion: reduce) {
+  html.mo-on .mo { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .about-page-hero * { animation: none !important; }
+  .btn-editorial:hover, .btn-editorial:active { transform: none; }
+}
+
+/* phones and tablets: columns are stacked, so reveal them upward instead of sliding sideways */
+@media (max-width: 991px) {
+  html.mo-on .mo[data-mo-dir="left"],
+  html.mo-on .mo[data-mo-dir="right"] { transform: translate3d(0, 24px, 0); }
+}

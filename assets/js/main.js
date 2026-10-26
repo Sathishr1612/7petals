@@ -19,12 +19,22 @@ document.addEventListener('DOMContentLoaded', () => {
   initAboutVisualReveal();
 });
 
+// Re-initialize dynamic header/footer components when loaded via HTML include
+document.addEventListener('componentsLoaded', () => {
+  initFloatingHeader();
+  initMobileDrawer();
+  initConsultationModal();
+  initBackToTop();
+  initGalleryLightbox();
+});
+
 /* --------------------------------------------------------------------------
    1. Floating Header & Scroll Behavior
    -------------------------------------------------------------------------- */
 function initFloatingHeader() {
   const headerWrapper = document.querySelector('.header-wrapper');
-  if (!headerWrapper) return;
+  if (!headerWrapper || headerWrapper.dataset.headerBound) return;
+  headerWrapper.dataset.headerBound = '1';
 
   const SCROLL_THRESHOLD = 80;
   let isScrolled = false;
@@ -51,6 +61,8 @@ function initFloatingHeader() {
       ticking = true;
     }
   }, { passive: true });
+
+  updateHeader(); // correct state if the page loads already scrolled (reload / #anchor)
 }
 
 /* --------------------------------------------------------------------------
@@ -64,7 +76,8 @@ function initMobileDrawer() {
   const dropdownToggle = document.querySelector('.mobile-dropdown-toggle');
   const dropdownParent = document.querySelector('.mobile-nav-item-dropdown');
 
-  if (!drawer || !toggleBtn) return;
+  if (!drawer || !toggleBtn || drawer.dataset.drawerBound) return;
+  drawer.dataset.drawerBound = '1';
 
   function openDrawer() {
     drawer.classList.add('active');
@@ -107,7 +120,7 @@ function initMobileDrawer() {
 }
 
 /* --------------------------------------------------------------------------
-   3. Projects Editorial Portfolio — Interactive Showcase
+   3. Projects Editorial Portfolio, Interactive Showcase
    -------------------------------------------------------------------------- */
 function initProjectsEditorial() {
   const section = document.querySelector('.projects-editorial');
@@ -1000,3 +1013,135 @@ function initGalleryFilters() {
     });
   });
 }
+
+// Global window assignments for modular component loader
+window.initFloatingHeader = initFloatingHeader;
+window.initMobileDrawer = initMobileDrawer;
+window.initHeroCarousel = initHeroCarousel;
+window.initProjectsEditorial = initProjectsEditorial;
+window.initGalleryLightbox = initGalleryLightbox;
+window.initGalleryFilters = initGalleryFilters;
+window.initTestimonialSlider = initTestimonialSlider;
+window.initFaqAccordion = initFaqAccordion;
+window.initConsultationModal = initConsultationModal;
+window.initBackToTop = initBackToTop;
+window.initNewsletterForm = initNewsletterForm;
+window.initScrollAnimations = initScrollAnimations;
+window.initAboutVisualReveal = initAboutVisualReveal;
+
+/* --------------------------------------------------------------------------
+   Featured Projects, spotlight + picker (home page)
+   Click / hover / arrow keys select a project. The active item's progress bar
+   drives autoplay (animationend -> next) and pauses while the stage is hovered
+   or focused, or off-screen.
+   -------------------------------------------------------------------------- */
+function initFeaturedProjects() {
+  const stage = document.querySelector('[data-pf]');
+  const dataEl = document.getElementById('pf-data');
+  if (!stage || !dataEl || stage.dataset.pfBound) return;
+  stage.dataset.pfBound = '1';
+
+  let projects;
+  try { projects = JSON.parse(dataEl.textContent); } catch (e) { return; }
+
+  const items = Array.from(stage.querySelectorAll('.pf-item'));
+  const layers = Array.from(stage.querySelectorAll('.pf-layer'));
+  const caption = stage.querySelector('.pf-spot-caption');
+  const el = (s) => stage.querySelector(s);
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canHover = window.matchMedia('(hover: hover)').matches;
+  let current = 0;
+  let activeLayer = 0;
+  let token = 0;
+
+  function show(i, opts) {
+    if (i === current) return;
+    current = i;
+    const p = projects[i];
+    const mine = ++token;
+
+    items.forEach((btn, n) => {
+      const on = n === i;
+      btn.classList.toggle('is-active', on);
+      btn.setAttribute('aria-selected', on);
+      btn.tabIndex = on ? 0 : -1;
+    });
+
+    if (opts && opts.scrollItem && window.matchMedia('(max-width: 991px)').matches) {
+      items[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+
+    // crossfade: load the new image into the hidden layer, then swap
+    const next = layers[1 - activeLayer];
+    const swap = () => {
+      if (mine !== token) return;
+      next.classList.add('is-on');
+      layers[activeLayer].classList.remove('is-on');
+      activeLayer = 1 - activeLayer;
+    };
+    next.alt = p.alt;
+    next.srcset = p.srcset;
+    next.sizes = '(min-width: 992px) 60vw, 100vw';
+    next.src = p.img;
+    if (next.complete && next.naturalWidth) swap();
+    else { next.onload = swap; next.onerror = swap; }
+
+    // caption fades out, updates, fades in
+    caption.classList.add('is-swapping');
+    setTimeout(() => {
+      if (mine !== token) return;
+      el('[data-pf-cat]').textContent = p.cat;
+      el('[data-pf-title]').textContent = p.title;
+      el('[data-pf-loc]').textContent = p.loc;
+      el('[data-pf-desc]').textContent = p.desc;
+      el('[data-pf-link]').setAttribute('href', p.href);
+      el('[data-pf-num]').textContent = String(i + 1).padStart(2, '0');
+      caption.classList.remove('is-swapping');
+    }, reduced ? 0 : 280);
+  }
+
+  items.forEach((btn, i) => {
+    btn.addEventListener('click', () => show(i, { scrollItem: true }));
+    if (canHover) btn.addEventListener('mouseenter', () => show(i));
+    btn.addEventListener('keydown', (e) => {
+      const dir = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+      if (!dir) return;
+      e.preventDefault();
+      const n = (i + dir + items.length) % items.length;
+      show(n, { scrollItem: true });
+      items[n].focus();
+    });
+  });
+
+  // Autoplay: advance every few seconds unless hovered, focused or off-screen
+  const DELAY = 6000;
+  let timer = null;
+  let hold = false;
+  let visible = true;
+
+  function schedule() {
+    clearTimeout(timer);
+    if (reduced) return;
+    timer = setTimeout(() => {
+      if (hold || !visible) { schedule(); return; }
+      show((current + 1) % items.length, { scrollItem: true });
+    }, DELAY);
+  }
+
+  stage.addEventListener('mouseenter', () => { hold = true; });
+  stage.addEventListener('mouseleave', () => { hold = false; schedule(); });
+  stage.addEventListener('focusin', () => { hold = true; });
+  stage.addEventListener('focusout', () => { hold = false; schedule(); });
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => { visible = entries[0].isIntersecting; }, { threshold: 0.25 }).observe(stage);
+  }
+
+  stage.addEventListener('click', schedule);
+  stage.addEventListener('mouseover', (e) => { if (e.target.closest('.pf-item')) schedule(); });
+
+  items.forEach((btn, n) => { btn.tabIndex = n === 0 ? 0 : -1; });
+  schedule();
+}
+window.initFeaturedProjects = initFeaturedProjects;
+document.addEventListener('DOMContentLoaded', initFeaturedProjects);

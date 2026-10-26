@@ -1,0 +1,1022 @@
+{
+ "hero-courtyard": {
+  "w": 2011,
+  "h": 1131,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "",
+  "cap": "Courtyard landscape",
+  "alt": "Sandstone-paved courtyard with turf panels and flower beds in front of a stone-clad building"
+ },
+ "bg-leaves": {
+  "w": 1376,
+  "h": 768,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "bg",
+  "proj": "",
+  "cap": "Leaf texture",
+  "alt": "Dark green foliage with soft golden light"
+ },
+ "crown-podium": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "rustomjee-crown",
+  "cap": "Podium landscape",
+  "alt": "Podium landscape at Rustomjee Crown with sculpted stone forms, lawn and stepping-stone paths below residential towers"
+ },
+ "crown-stones": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "rustomjee-crown",
+  "cap": "Sculpted stone seating",
+  "alt": "Layered stone seating steps set into a sculpted podium landscape at Rustomjee Crown"
+ },
+ "crown-lawn": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "rustomjee-crown",
+  "cap": "Lawn and stepping stones",
+  "alt": "Turf lawn with stone stepping pads around a sculpted stone seat at Rustomjee Crown"
+ },
+ "crown-pool": {
+  "w": 1448,
+  "h": 1086,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "rustomjee-crown",
+  "cap": "Pool with planted island",
+  "alt": "Blue-tiled pool with a planted island and a frangipani tree at Rustomjee Crown"
+ },
+ "crown-works": {
+  "w": 1040,
+  "h": 780,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "rustomjee-crown",
+  "cap": "Podium works in progress",
+  "alt": "Landscape and civil finishing works in progress on the Rustomjee Crown podium"
+ },
+ "khar-bench": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "terrace",
+  "proj": "rustomjee-paramount-khar",
+  "cap": "Terrace planter with timber bench",
+  "alt": "Terrace planter with built-in timber bench and polished stone paving at Rustomjee Paramount, Khar"
+ },
+ "khar-planters": {
+  "w": 1578,
+  "h": 997,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "terrace",
+  "proj": "rustomjee-paramount-khar",
+  "cap": "Flowering planters on stone terrace",
+  "alt": "Planters with purple flowering shrubs along a stone-paved terrace at Rustomjee Paramount, Khar"
+ },
+ "khar-wall": {
+  "w": 4032,
+  "h": 3024,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "rustomjee-paramount-khar",
+  "cap": "Feature wall with planting niches",
+  "alt": "Dark textured feature wall with circular planting niches above stone paving at Rustomjee Paramount, Khar"
+ },
+ "khar-tree": {
+  "w": 1448,
+  "h": 1086,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "terrace",
+  "proj": "rustomjee-paramount-khar",
+  "cap": "Metal tree wall planter",
+  "alt": "Black metal tree sculpture holding potted plants on a terrace wall at Rustomjee Paramount, Khar"
+ },
+ "gcorp-walk": {
+  "w": 1448,
+  "h": 1086,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "g-corp-tech-park",
+  "cap": "Walkway with pergola and hedge",
+  "alt": "Stone walkway with a steel pergola and dense green hedge at G Corp Tech Park, Thane"
+ },
+ "gcorp-deck": {
+  "w": 1082,
+  "h": 626,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "g-corp-tech-park",
+  "cap": "Timber deck under canopy",
+  "alt": "Timber decking beneath a curved canopy with planting beds at G Corp Tech Park, Thane"
+ },
+ "gcorp-lawn": {
+  "w": 1082,
+  "h": 385,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "g-corp-tech-park",
+  "cap": "Open lawn",
+  "alt": "Open turf lawn framed by mature trees at G Corp Tech Park, Thane"
+ },
+ "gcorp-trees": {
+  "w": 726,
+  "h": 1045,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "g-corp-tech-park",
+  "cap": "Stone path through trees",
+  "alt": "Stone-paved path through planted trees at G Corp Tech Park, Thane"
+ },
+ "gcorp-paver-road": {
+  "w": 1156,
+  "h": 868,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "g-corp-tech-park",
+  "cap": "Paver block road",
+  "alt": "Completed paver block road with kerb stones at G Corp Tech Park, Thane"
+ },
+ "gcorp-paver-laying": {
+  "w": 868,
+  "h": 1156,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "g-corp-tech-park",
+  "cap": "Paver block laying",
+  "alt": "Paver block road being laid beside the office buildings at G Corp Tech Park, Thane"
+ },
+ "gcorp-kerb": {
+  "w": 868,
+  "h": 1156,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "g-corp-tech-park",
+  "cap": "Kerb stone and paver works",
+  "alt": "Kerb stone and paver block works in progress at G Corp Tech Park, Thane"
+ },
+ "trees-pond": {
+  "w": 1448,
+  "h": 805,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "godrej-the-trees",
+  "cap": "Reflecting pond and sculpture",
+  "alt": "Reflecting pond with a pouring-vessel sculpture framed by trees at Godrej The Trees"
+ },
+ "trees-bench": {
+  "w": 1666,
+  "h": 944,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "godrej-the-trees",
+  "cap": "Granite seating in the beer garden",
+  "alt": "Curved black granite bench set in tropical planting in the beer garden at Godrej The Trees"
+ },
+ "trees-blossom": {
+  "w": 1655,
+  "h": 950,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "godrej-the-trees",
+  "cap": "Flowering trees and clipped hedge",
+  "alt": "Flowering crape-myrtle trees above a clipped hedge beside a paved path at Godrej The Trees"
+ },
+ "trees-lawn": {
+  "w": 1024,
+  "h": 768,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "godrej-the-trees",
+  "cap": "Lawn with stepping-stone panels",
+  "alt": "Courtyard lawn with large stone stepping panels beside residential towers at Godrej The Trees"
+ },
+ "trees-paving": {
+  "w": 1024,
+  "h": 576,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "godrej-the-trees",
+  "cap": "Stone paving with turf joints",
+  "alt": "Stone paving with turf joints and planting beside a glass-fronted building at Godrej The Trees"
+ },
+ "trees-court": {
+  "w": 1024,
+  "h": 576,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "godrej-the-trees",
+  "cap": "Central courtyard planting",
+  "alt": "Courtyard garden with mixed tree and shrub planting between residential buildings at Godrej The Trees"
+ },
+ "vaikunth-flowers": {
+  "w": 1672,
+  "h": 941,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "piramal-vaikunth",
+  "cap": "Flower show display",
+  "alt": "Marigold and seasonal flower beds with white gravel paths at a flower show at Piramal Vaikunth"
+ },
+ "vaikunth-flags": {
+  "w": 1602,
+  "h": 981,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "piramal-vaikunth",
+  "cap": "Cordyline beds along the entrance walk",
+  "alt": "Red-leaved cordyline and mixed shrub beds along a paved walkway with flags at Piramal Vaikunth"
+ },
+ "vaikunth-entrance": {
+  "w": 1936,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "piramal-vaikunth",
+  "cap": "Entrance signage planting",
+  "alt": "Flower bed around the Piramal Vaikunth entrance sign with a cobble-paved driveway"
+ },
+ "vaikunth-clubhouse": {
+  "w": 1936,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "piramal-vaikunth",
+  "cap": "Clubhouse entrance",
+  "alt": "Landscaped approach and lawn at the clubhouse entrance of Piramal Vaikunth"
+ },
+ "vaikunth-avenue": {
+  "w": 1936,
+  "h": 1162,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "piramal-vaikunth",
+  "cap": "Cobble-paved avenue",
+  "alt": "Granite cobble-paved avenue lined with plants and flags at Piramal Vaikunth"
+ },
+ "vaikunth-roundabout": {
+  "w": 1328,
+  "h": 747,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "piramal-vaikunth",
+  "cap": "Flower circle",
+  "alt": "Circular flower bed beside a paved road at Piramal Vaikunth"
+ },
+ "oberoi-aerial": {
+  "w": 1280,
+  "h": 960,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "oberoi-enigma-mulund",
+  "cap": "Pool courtyard from above",
+  "alt": "Aerial view of a landscaped pool courtyard with paths and planting at Oberoi Enigma, Mulund"
+ },
+ "oberoi-pergola": {
+  "w": 674,
+  "h": 972,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "oberoi-enigma-mulund",
+  "cap": "Pergola walkway",
+  "alt": "Steel pergola walkway with ornamental planting at Oberoi Enigma, Mulund"
+ },
+ "nirlon-walkway": {
+  "w": 623,
+  "h": 953,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "nirlon-goregaon",
+  "cap": "Planted walkway from above",
+  "alt": "Elevated view of a planted walkway beside railings at Nirlon, Goregaon"
+ },
+ "nirlon-grasses": {
+  "w": 780,
+  "h": 1040,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "nirlon-goregaon",
+  "cap": "Ornamental grass planting",
+  "alt": "Ornamental grass and shrub planting on a landscaped deck at Nirlon, Goregaon"
+ },
+ "nirlon-terrace": {
+  "w": 660,
+  "h": 968,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "nirlon-goregaon",
+  "cap": "Planting along the terrace",
+  "alt": "Planted terrace edge with ornamental grasses at Nirlon, Goregaon"
+ },
+ "khalapur-bed": {
+  "w": 594,
+  "h": 1012,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "godrej-boyce-khalapur",
+  "cap": "Curved foliage bed",
+  "alt": "Curved bed of red and green foliage plants edged with kerb stones at the Godrej & Boyce factory, Khalapur"
+ },
+ "khalapur-road": {
+  "w": 594,
+  "h": 869,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "godrej-boyce-khalapur",
+  "cap": "Plantation beside the road",
+  "alt": "Plantation bed and palms beside an internal road at the Godrej & Boyce factory, Khalapur"
+ },
+ "urbanfarm-beds": {
+  "w": 1936,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "godrej-urban-farm",
+  "cap": "Raised planter beds",
+  "alt": "Raised timber planter beds with stepping-stone paths and lawn at the Godrej urban farm"
+ },
+ "seawoods-path": {
+  "w": 1485,
+  "h": 1059,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "seawoods-ambedkar-garden",
+  "cap": "Red EPDM jogging path",
+  "alt": "Red EPDM path curving through lawns and palms at Ambedkar Garden, Seawoods"
+ },
+ "seawoods-promenade": {
+  "w": 1280,
+  "h": 960,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "seawoods-ambedkar-garden",
+  "cap": "Promenade with palms",
+  "alt": "Paved and red EPDM promenade lined with palms at Ambedkar Garden, Seawoods"
+ },
+ "seawoods-lawn": {
+  "w": 1280,
+  "h": 960,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "seawoods-ambedkar-garden",
+  "cap": "Open lawn with colourful seating",
+  "alt": "Wide lawn with a colourful tiled seating platform at Ambedkar Garden, Seawoods"
+ },
+ "seawoods-gazebo": {
+  "w": 1280,
+  "h": 960,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "seawoods-ambedkar-garden",
+  "cap": "Lawn and gazebo",
+  "alt": "Lawn with a gazebo and tiered seating at Ambedkar Garden, Seawoods"
+ },
+ "seawoods-epdm": {
+  "w": 1888,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "seawoods-ambedkar-garden",
+  "cap": "EPDM pathway with kerb",
+  "alt": "Red EPDM pathway with kerb edging through planting at Ambedkar Garden, Seawoods"
+ },
+ "seawoods-platform": {
+  "w": 1925,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "seawoods-ambedkar-garden",
+  "cap": "Seating platform",
+  "alt": "Raised seating platform with colourful tile facing at Ambedkar Garden, Seawoods"
+ },
+ "kilbill-garden": {
+  "w": 1600,
+  "h": 983,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "kilbill-bungalow",
+  "cap": "Gravel court with mature tree",
+  "alt": "Garden court with white gravel circle, rock and raised red-finished planters under a mature tree at Kilbill Bungalow"
+ },
+ "kilbill-drive": {
+  "w": 1852,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "kilbill-bungalow",
+  "cap": "Paver driveway and masonry",
+  "alt": "Herringbone paver driveway with red-finished masonry planter edging at Kilbill Bungalow"
+ },
+ "kilbill-path": {
+  "w": 1797,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "kilbill-bungalow",
+  "cap": "Trimix path and lawn",
+  "alt": "Red trimix path with stone-edged lawn at Kilbill Bungalow"
+ },
+ "kilbill-tree": {
+  "w": 1870,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "kilbill-bungalow",
+  "cap": "Trimix pathway and masonry",
+  "alt": "Trimix pathway curving under a mature tree with masonry planters at Kilbill Bungalow"
+ },
+ "hs-grass-paver": {
+  "w": 1936,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Grass paver",
+  "alt": "River-stone grass paver surface with grass growing between stones"
+ },
+ "hs-stamped-path": {
+  "w": 864,
+  "h": 1152,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Stamped pathway",
+  "alt": "Stamped concrete pathway with planted edges"
+ },
+ "hs-water-body": {
+  "w": 1448,
+  "h": 1086,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Water body with RCC bridge",
+  "alt": "Constructed rock water body with a rustic railed bridge and gazebo, built in RCC with fabrication and electrical works"
+ },
+ "hs-sitting-tree": {
+  "w": 1760,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Seating platform around a tree",
+  "alt": "Circular stone seating platform built around a mature tree"
+ },
+ "hs-skating-rink": {
+  "w": 780,
+  "h": 1040,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Skating rink with railing",
+  "alt": "Coloured EPDM skating rink with steel railing"
+ },
+ "hs-gazebo-bridge": {
+  "w": 972,
+  "h": 1100,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Stone steps and gazebo",
+  "alt": "Rustic stone steps leading to a gazebo in a landscaped garden"
+ },
+ "hs-play-epdm": {
+  "w": 1280,
+  "h": 960,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "EPDM play area",
+  "alt": "Green EPDM play surface with play equipment between residential towers"
+ },
+ "hs-play-colour": {
+  "w": 1742,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Coloured EPDM playground",
+  "alt": "Bright coloured EPDM playground surface with play structure"
+ },
+ "hs-epdm-trellis": {
+  "w": 1888,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "EPDM pathway and trellis",
+  "alt": "EPDM pathway beside a green lattice trellis fence"
+ },
+ "hs-granite-ledge": {
+  "w": 1870,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Granite seating and kerb",
+  "alt": "Granite faced seating ledge beside an EPDM pathway"
+ },
+ "hs-pergola-seat": {
+  "w": 935,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Pergola and seating",
+  "alt": "Green steel pergola with benches on a paved base"
+ },
+ "hs-led-path": {
+  "w": 917,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Lit pathway at night",
+  "alt": "Pathway with EPDM and stamped finish lit by pole lights at night"
+ },
+ "hs-led-seat": {
+  "w": 1815,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "LED-lit seating",
+  "alt": "Curved seating wall with warm LED lighting at night"
+ },
+ "hs-court-fence": {
+  "w": 972,
+  "h": 1008,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Play court with MS fencing",
+  "alt": "Marked sports court enclosed by mild steel fencing"
+ },
+ "hs-court-shelter": {
+  "w": 972,
+  "h": 1027,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "hardscape",
+  "proj": "",
+  "cap": "Shelter beside the play court",
+  "alt": "Covered seating shelter with lattice walls beside a sports court"
+ },
+ "terrace-top": {
+  "w": 1452,
+  "h": 968,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "terrace",
+  "proj": "",
+  "cap": "Terrace seating deck",
+  "alt": "Top view of a terrace garden with timber deck, lounge chairs, stepping stones and planting"
+ },
+ "terrace-night": {
+  "w": 1467,
+  "h": 978,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "terrace",
+  "proj": "",
+  "cap": "Terrace pergola at night",
+  "alt": "Lit terrace garden with a timber pergola, deck and lawn at dusk"
+ },
+ "terrace-lawn": {
+  "w": 1467,
+  "h": 978,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "terrace",
+  "proj": "",
+  "cap": "Terrace lawn and seating",
+  "alt": "Terrace garden with lawn, stepping stones and built-in seating lit at dusk"
+ },
+ "terrace-lounge": {
+  "w": 1467,
+  "h": 978,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "terrace",
+  "proj": "",
+  "cap": "Terrace lounge with planting",
+  "alt": "Terrace lounge with uplit planters and timber flooring at sunset"
+ },
+ "vg-install": {
+  "w": 1936,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "vertical",
+  "proj": "",
+  "cap": "Vertical garden installation",
+  "alt": "Team members inspecting a freshly planted vertical garden wall"
+ },
+ "vg-wall-tall": {
+  "w": 972,
+  "h": 1217,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "vertical",
+  "proj": "",
+  "cap": "Mixed-foliage green wall",
+  "alt": "Tall vertical garden wall planted with mixed foliage in several colours"
+ },
+ "vg-wall-long": {
+  "w": 1936,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "vertical",
+  "proj": "",
+  "cap": "Long green wall",
+  "alt": "Long vertical garden wall along a building facade"
+ },
+ "vg-wall-corner": {
+  "w": 1936,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "vertical",
+  "proj": "",
+  "cap": "Green wall in patterned sections",
+  "alt": "Vertical garden wall planted in contrasting patterned sections"
+ },
+ "vg-wall-bamboo": {
+  "w": 1936,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "vertical",
+  "proj": "",
+  "cap": "Green wall with flowering border",
+  "alt": "Dense vertical garden with red flowering plants at its base"
+ },
+ "vg-terrace": {
+  "w": 853,
+  "h": 1280,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "vertical",
+  "proj": "",
+  "cap": "Green wall beside a pergola",
+  "alt": "Vertical garden beside a timber pergola on a terrace"
+ },
+ "tt-crane": {
+  "w": 792,
+  "h": 1155,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "transplant",
+  "proj": "",
+  "cap": "Mature tree lifted by crane",
+  "alt": "Mature tree with root ball being lifted by a crane at a site"
+ },
+ "tt-lift": {
+  "w": 719,
+  "h": 1137,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "transplant",
+  "proj": "",
+  "cap": "Tree transplantation near an industrial site",
+  "alt": "Tree held by a crane for relocation beside an industrial site"
+ },
+ "tt-building": {
+  "w": 719,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "transplant",
+  "proj": "",
+  "cap": "Tree replanted on a building",
+  "alt": "Tree being placed on a building level using scaffolding"
+ },
+ "tt-team": {
+  "w": 719,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "transplant",
+  "proj": "",
+  "cap": "Team guiding a tree",
+  "alt": "Workers guiding a mature tree during relocation beside a glass-fronted building"
+ },
+ "tt-palm": {
+  "w": 737,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "transplant",
+  "proj": "",
+  "cap": "Palm relocation",
+  "alt": "Palm being lifted by a crane for relocation near an industrial building"
+ },
+ "irrigation-lawn": {
+  "w": 771,
+  "h": 935,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "nursery",
+  "proj": "",
+  "cap": "Sprinkler irrigation on lawn",
+  "alt": "Sprinkler watering a turf lawn around palm trees with circular tree guards"
+ },
+ "nursery-stock": {
+  "w": 1672,
+  "h": 941,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "nursery",
+  "proj": "",
+  "cap": "Nursery plant stock",
+  "alt": "Rows of potted Aglaonema plants growing under a polyhouse in the plant nursery"
+ },
+ "nursery-farm": {
+  "w": 1936,
+  "h": 1089,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "nursery",
+  "proj": "",
+  "cap": "Karjat nursery and farm",
+  "alt": "Polyhouses, flowering shrubs and a footbridge at the nursery farm near Karjat"
+ },
+ "garden-flowers": {
+  "w": 1673,
+  "h": 940,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "",
+  "cap": "Seasonal flower beds",
+  "alt": "Mass seasonal flower planting beside a paved path under a colourful canopy"
+ },
+ "garden-river": {
+  "w": 1280,
+  "h": 960,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "",
+  "cap": "Riverfront promenade garden",
+  "alt": "Aerial view of a riverfront promenade garden with lawns, paths and play area"
+ },
+ "garden-sandstone": {
+  "w": 1982,
+  "h": 1186,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "landscape",
+  "proj": "",
+  "cap": "Sandstone court garden",
+  "alt": "Courtyard garden with sandstone paving panels, turf and flower beds"
+ },
+ "garden-bungalow": {
+  "w": 1024,
+  "h": 687,
+  "widths": [
+   714,
+   1280
+  ],
+  "cat": "softscape",
+  "proj": "",
+  "cap": "Bungalow lawn and seating",
+  "alt": "Lawn with seating and a frangipani tree in front of a bungalow"
+ }
+}

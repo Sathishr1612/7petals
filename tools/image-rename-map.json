@@ -1,0 +1,512 @@
+[
+ {
+  "old": "assets/img/general/hero-courtyard-1280.webp",
+  "new": "assets/img/general/sandstone-paved-courtyard-landscape.webp",
+  "source": "general/Sunlit Modern Courtyard Garden.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/general/bg-leaves-1280.webp",
+  "new": "assets/img/general/dark-green-botanical-leaf-background.webp",
+  "source": "general/bg-leaves.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/projects/rustomjee-crown/crown-podium-1280.webp",
+  "new": "assets/img/projects/rustomjee-crown/rustomjee-crown-podium-landscape.webp",
+  "source": "projects/rustomjee-crown/Modern Courtyard Beneath High-Rises.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/rustomjee-crown/crown-stones-1280.webp",
+  "new": "assets/img/projects/rustomjee-crown/rustomjee-crown-sculpted-stone-seating.webp",
+  "source": "projects/rustomjee-crown/Rooftop Construction Overlooking the City.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/rustomjee-crown/crown-lawn-1280.webp",
+  "new": "assets/img/projects/rustomjee-crown/rustomjee-crown-lawn-stepping-stones.webp",
+  "source": "projects/rustomjee-crown/Modern Courtyard Garden With Sculpted Mounds.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/rustomjee-crown/crown-pool-1280.webp",
+  "new": "assets/img/projects/rustomjee-crown/rustomjee-crown-pool-planted-island.webp",
+  "source": "projects/rustomjee-crown/Urban Courtyard Pool and High-Rises.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/rustomjee-crown/crown-works-1280.webp",
+  "new": "assets/img/projects/rustomjee-crown/rustomjee-crown-podium-works-progress.webp",
+  "source": "projects/rustomjee-crown/Rooftop Construction Overlooking the City (1).png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/rustomjee-paramount-khar/khar-bench-1280.webp",
+  "new": "assets/img/projects/rustomjee-paramount-khar/rustomjee-paramount-khar-terrace-planter-timber-bench.webp",
+  "source": "rustomjee-paramount-khar/khar-bench-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/projects/rustomjee-paramount-khar/khar-planters-1280.webp",
+  "new": "assets/img/projects/rustomjee-paramount-khar/rustomjee-paramount-khar-flowering-planters-stone-terrace.webp",
+  "source": "rustomjee-paramount-khar/khar-planters-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/projects/rustomjee-paramount-khar/khar-wall-1280.webp",
+  "new": "assets/img/projects/rustomjee-paramount-khar/rustomjee-paramount-khar-feature-wall-planting-niches.webp",
+  "source": "rustomjee-paramount-khar/khar-wall-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/projects/rustomjee-paramount-khar/khar-tree-1280.webp",
+  "new": "assets/img/projects/rustomjee-paramount-khar/rustomjee-paramount-khar-metal-tree-wall-planter.webp",
+  "source": "rustomjee-paramount-khar/khar-tree-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/projects/g-corp-tech-park/gcorp-walk-1280.webp",
+  "new": "assets/img/projects/g-corp-tech-park/g-corp-tech-park-walkway-pergola-hedge.webp",
+  "source": "g-corp-tech-park/gcorp-walk-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/projects/g-corp-tech-park/gcorp-deck-1280.webp",
+  "new": "assets/img/projects/g-corp-tech-park/g-corp-tech-park-timber-deck-under-canopy.webp",
+  "source": "projects/g-corp-tech-park/Modern Canopy Garden Walkway (1).png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/g-corp-tech-park/gcorp-lawn-1280.webp",
+  "new": "assets/img/projects/g-corp-tech-park/g-corp-tech-park-open-lawn.webp",
+  "source": "projects/g-corp-tech-park/Sunlit Urban Garden Lawn.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/g-corp-tech-park/gcorp-trees-1280.webp",
+  "new": "assets/img/projects/g-corp-tech-park/g-corp-tech-park-stone-path-through-trees.webp",
+  "source": "projects/g-corp-tech-park/Dappled Sunlight Garden Walkway.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/g-corp-tech-park/gcorp-paver-road-1280.webp",
+  "new": "assets/img/projects/g-corp-tech-park/g-corp-tech-park-paver-block-road.webp",
+  "source": "projects/g-corp-tech-park/Work in Progress Tree-Lined Walkway.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/g-corp-tech-park/gcorp-paver-laying-1280.webp",
+  "new": "assets/img/projects/g-corp-tech-park/g-corp-tech-park-paver-block-laying.webp",
+  "source": "hard/p30_1.jpg",
+  "how": "original-source"
+ },
+ {
+  "old": "assets/img/projects/g-corp-tech-park/gcorp-kerb-1280.webp",
+  "new": "assets/img/projects/g-corp-tech-park/g-corp-tech-park-kerb-stone-paver-works.webp",
+  "source": "projects/g-corp-tech-park/Landscaping Construction Walkway.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/godrej-the-trees/trees-pond-1280.webp",
+  "new": "assets/img/projects/godrej-the-trees/godrej-the-trees-reflecting-pond-sculpture.webp",
+  "source": "godrej-the-trees/trees-pond-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/projects/godrej-the-trees/trees-bench-1280.webp",
+  "new": "assets/img/projects/godrej-the-trees/godrej-the-trees-granite-seating-beer-garden.webp",
+  "source": "godrej-the-trees/trees-bench-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/projects/godrej-the-trees/trees-blossom-1280.webp",
+  "new": "assets/img/projects/godrej-the-trees/godrej-the-trees-flowering-clipped-hedge.webp",
+  "source": "projects/godrej-the-trees/Vibrant Pink-Bloom Urban Garden Island.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/godrej-the-trees/trees-lawn-1280.webp",
+  "new": "assets/img/projects/godrej-the-trees/godrej-the-trees-lawn-stepping-stone-panels.webp",
+  "source": "projects/godrej-the-trees/Modern Courtyard Garden with Scaffolding.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/godrej-the-trees/trees-paving-1280.webp",
+  "new": "assets/img/projects/godrej-the-trees/godrej-the-trees-stone-paving-turf-joints.webp",
+  "source": "projects/godrej-the-trees/Modern Courtyard with Lush Landscaping.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/godrej-the-trees/trees-court-1280.webp",
+  "new": "assets/img/projects/godrej-the-trees/godrej-the-trees-central-courtyard-planting.webp",
+  "source": "projects/godrej-the-trees/Sunlit Green Courtyard Among Modern Towers.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/piramal-vaikunth/vaikunth-flowers-1280.webp",
+  "new": "assets/img/projects/piramal-vaikunth/piramal-vaikunth-flower-show-display.webp",
+  "source": "projects/piramal-vaikunth/Vibrant Miniature Architectural Flower Garden.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/piramal-vaikunth/vaikunth-flags-1280.webp",
+  "new": "assets/img/projects/piramal-vaikunth/piramal-vaikunth-banners-garden-walkway.webp",
+  "source": "projects/piramal-vaikunth/Colorful Banners Along a Garden Walkway.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/piramal-vaikunth/vaikunth-entrance-1280.webp",
+  "new": "assets/img/projects/piramal-vaikunth/piramal-vaikunth-entrance-signage-planting.webp",
+  "source": "projects/piramal-vaikunth/Piramal Vaikunth Garden Entrance.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/piramal-vaikunth/vaikunth-clubhouse-1280.webp",
+  "new": "assets/img/projects/piramal-vaikunth/piramal-vaikunth-clubhouse-entrance.webp",
+  "source": "projects/piramal-vaikunth/Modern Campus Entrance with Piramal Banners.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/piramal-vaikunth/vaikunth-avenue-1280.webp",
+  "new": "assets/img/projects/piramal-vaikunth/piramal-vaikunth-cobble-paved-avenue.webp",
+  "source": "projects/piramal-vaikunth/Banners Along a Lush Garden Drive.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/piramal-vaikunth/vaikunth-roundabout-1280.webp",
+  "new": "assets/img/projects/piramal-vaikunth/piramal-vaikunth-flower-circle.webp",
+  "source": "projects/piramal-vaikunth/Vibrant Botanical Garden Pathway.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/oberoi-enigma-mulund/oberoi-aerial-1280.webp",
+  "new": "assets/img/projects/oberoi-enigma-mulund/oberoi-enigma-mulund-pool-courtyard-from-above.webp",
+  "source": "projects/oberoi-enigma-mulund/Sunny Modern Rooftop Pool Courtyard.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/oberoi-enigma-mulund/oberoi-pergola-1280.webp",
+  "new": "assets/img/projects/oberoi-enigma-mulund/oberoi-enigma-mulund-pergola-walkway.webp",
+  "source": "projects/oberoi-enigma-mulund/Sunlit Rooftop Garden and Poolscape.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/nirlon-goregaon/nirlon-walkway-1280.webp",
+  "new": "assets/img/projects/nirlon-goregaon/nirlon-goregaon-planted-walkway-from-above.webp",
+  "source": "projects/nirlon-goregaon/Bird’s-Eye Urban Terrace and Streetscape.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/nirlon-goregaon/nirlon-grasses-1280.webp",
+  "new": "assets/img/projects/nirlon-goregaon/nirlon-goregaon-ornamental-grass-planting.webp",
+  "source": "projects/nirlon-goregaon/Sunlit Urban Terrace with Worker.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/nirlon-goregaon/nirlon-terrace-1280.webp",
+  "new": "assets/img/projects/nirlon-goregaon/nirlon-goregaon-planting-along-terrace.webp",
+  "source": "projects/nirlon-goregaon/Sunlit Tilted Rooftop Garden Walkway.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/godrej-boyce-khalapur/khalapur-bed-1280.webp",
+  "new": "assets/img/projects/godrej-boyce-khalapur/godrej-boyce-khalapur-curved-foliage-bed.webp",
+  "source": "projects/godrej-boyce-khalapur/Landscaped Industrial Park Streetscape.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/godrej-boyce-khalapur/khalapur-road-1280.webp",
+  "new": "assets/img/projects/godrej-boyce-khalapur/godrej-boyce-khalapur-plantation-beside-road.webp",
+  "source": "projects/godrej-boyce-khalapur/Palm-Lined Landscaped Boulevard.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/godrej-urban-farm/urbanfarm-beds-1280.webp",
+  "new": "assets/img/projects/godrej-urban-farm/godrej-urban-farm-raised-planter-beds.webp",
+  "source": "projects/godrej-urban-farm/Sunlit Rooftop Garden Courtyard.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/seawoods-ambedkar-garden/seawoods-path-1280.webp",
+  "new": "assets/img/projects/seawoods-ambedkar-garden/seawoods-ambedkar-garden-red-epdm-jogging-path.webp",
+  "source": "7petals-projects/garden-park.webp",
+  "how": "original-source"
+ },
+ {
+  "old": "assets/img/projects/seawoods-ambedkar-garden/seawoods-promenade-1280.webp",
+  "new": "assets/img/projects/seawoods-ambedkar-garden/seawoods-ambedkar-garden-promenade-palms.webp",
+  "source": "projects/seawoods-ambedkar-garden/Tropical Garden Path with Yellow Benches.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/seawoods-ambedkar-garden/seawoods-lawn-1280.webp",
+  "new": "assets/img/projects/seawoods-ambedkar-garden/seawoods-ambedkar-garden-open-lawn-colourful-seating.webp",
+  "source": "newppt/image72.jpg",
+  "how": "original-source"
+ },
+ {
+  "old": "assets/img/projects/seawoods-ambedkar-garden/seawoods-gazebo-1280.webp",
+  "new": "assets/img/projects/seawoods-ambedkar-garden/seawoods-ambedkar-garden-lawn-gazebo.webp",
+  "source": "projects/seawoods-ambedkar-garden/Lush Garden Park with Colorful Pavilion.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/seawoods-ambedkar-garden/seawoods-epdm-1280.webp",
+  "new": "assets/img/projects/seawoods-ambedkar-garden/seawoods-ambedkar-garden-epdm-pathway-kerb.webp",
+  "source": "hard/p08_1.jpg",
+  "how": "original-source"
+ },
+ {
+  "old": "assets/img/projects/seawoods-ambedkar-garden/seawoods-platform-1280.webp",
+  "new": "assets/img/projects/seawoods-ambedkar-garden/seawoods-ambedkar-garden-seating-platform.webp",
+  "source": "projects/seawoods-ambedkar-garden/Curved Mosaic Garden Platform (1).png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/kilbill-bungalow/kilbill-garden-1280.webp",
+  "new": "assets/img/projects/kilbill-bungalow/kilbill-bungalow-gravel-court-mature-tree.webp",
+  "source": "kilbill-bungalow/kilbill-garden-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/projects/kilbill-bungalow/kilbill-drive-1280.webp",
+  "new": "assets/img/projects/kilbill-bungalow/kilbill-bungalow-paver-driveway-masonry.webp",
+  "source": "projects/kilbill-bungalow/Tropical Brick Courtyard Driveway.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/kilbill-bungalow/kilbill-path-1280.webp",
+  "new": "assets/img/projects/kilbill-bungalow/kilbill-bungalow-trimix-path-lawn.webp",
+  "source": "projects/kilbill-bungalow/Elevated Gated Garden Courtyard.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/projects/kilbill-bungalow/kilbill-tree-1280.webp",
+  "new": "assets/img/projects/kilbill-bungalow/kilbill-bungalow-trimix-pathway-masonry.webp",
+  "source": "projects/kilbill-bungalow/Tranquil Terracotta Garden Path.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-grass-paver-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-grass-paver.webp",
+  "source": "services/hardscape/Mossy Cobblestone Garden Path.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-stamped-path-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-stamped-pathway.webp",
+  "source": "hard/p09_1.jpg",
+  "how": "original-source"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-water-body-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-water-body-rcc-bridge.webp",
+  "source": "services/hardscape/Tropical Garden Bridge and Gazebo.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-sitting-tree-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-seating-platform-around-tree.webp",
+  "source": "services/hardscape/Sunlit Circular Tree Bench Garden.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-skating-rink-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-skating-rink-railing.webp",
+  "source": "hard/p12_1.jpg",
+  "how": "original-source"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-gazebo-bridge-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-stone-steps-gazebo.webp",
+  "source": "services/hardscape/Tropical Garden Park with Gazebo.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-play-epdm-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-epdm-play-area.webp",
+  "source": "services/hardscape/Vibrant Apartment Courtyard Playground.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-play-colour-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-coloured-epdm-playground.webp",
+  "source": "services/hardscape/Vibrant Colorful Playground with Hopscotch.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-epdm-trellis-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-epdm-pathway-trellis.webp",
+  "source": "services/hardscape/Curved Pathway Along Green Lattice Fence.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-granite-ledge-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-granite-seating-kerb.webp",
+  "source": "services/hardscape/Curved Granite Planter Walkway.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-pergola-seat-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-pergola-seating.webp",
+  "source": "services/hardscape/Tropical Courtyard Gazebo with Backpacks.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-led-path-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-lit-pathway-night.webp",
+  "source": "services/hardscape/Illuminated Courtyard Playground at Night.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-led-seat-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-led-lit-seating.webp",
+  "source": "services/hardscape/Warmly Lit Courtyard Pathway.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-court-fence-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-play-court-ms-fencing.webp",
+  "source": "services/hardscape/Vibrant Fenced Multi-Sport Garden Court.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/hardscape/hs-court-shelter-1280.webp",
+  "new": "assets/img/services/hardscape/hardscape-shelter-beside-play-court.webp",
+  "source": "services/hardscape/Green Gazebo Beside Sports Court.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/terrace-gardens/terrace-top-1280.webp",
+  "new": "assets/img/services/terrace-gardens/terrace-garden-seating-deck.webp",
+  "source": "terrace-gardens/terrace-top-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/services/terrace-gardens/terrace-night-1280.webp",
+  "new": "assets/img/services/terrace-gardens/terrace-garden-pergola-night.webp",
+  "source": "terrace-gardens/terrace-night-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/services/terrace-gardens/terrace-lawn-1280.webp",
+  "new": "assets/img/services/terrace-gardens/terrace-garden-lawn-seating.webp",
+  "source": "terrace-gardens/terrace-lawn-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/services/terrace-gardens/terrace-lounge-1280.webp",
+  "new": "assets/img/services/terrace-gardens/terrace-garden-lounge-planting.webp",
+  "source": "terrace-gardens/terrace-lounge-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/services/vertical-gardens/vg-install-1280.webp",
+  "new": "assets/img/services/vertical-gardens/vertical-garden-installation-site-team.webp",
+  "source": "services/vertical-gardens/Workers Tending a Vertical Garden Wall.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/vertical-gardens/vg-wall-tall-1280.webp",
+  "new": "assets/img/services/vertical-gardens/vertical-garden-mixed-foliage-green-wall.webp",
+  "source": "services/vertical-gardens/Lush Vertical Garden Wall with Irrigation Pipe.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/vertical-gardens/vg-wall-long-1280.webp",
+  "new": "assets/img/services/vertical-gardens/vertical-garden-long-green-wall.webp",
+  "source": "services/vertical-gardens/Modern Façade with Lush Vertical Garden.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/vertical-gardens/vg-wall-corner-1280.webp",
+  "new": "assets/img/services/vertical-gardens/vertical-garden-green-wall-patterned-sections.webp",
+  "source": "services/vertical-gardens/Vibrant Urban Living Wall Parking Area.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/vertical-gardens/vg-wall-bamboo-1280.webp",
+  "new": "assets/img/services/vertical-gardens/vertical-garden-green-wall-flowering-border.webp",
+  "source": "services/vertical-gardens/Lush Urban Vertical Garden Facade.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/vertical-gardens/vg-terrace-1280.webp",
+  "new": "assets/img/services/vertical-gardens/vertical-garden-green-wall-beside-pergola.webp",
+  "source": "services/vertical-gardens/Twilight Rooftop Garden Retreat.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/tree-transplantation/tt-crane-1280.webp",
+  "new": "assets/img/services/tree-transplantation/tree-transplantation-crane-lifting-mature-tree.webp",
+  "source": "services/tree-transplantation/Tree Transplanting at a Construction Site.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/tree-transplantation/tt-lift-1280.webp",
+  "new": "assets/img/services/tree-transplantation/tree-transplantation-lifting-tree-industrial-site.webp",
+  "source": "services/tree-transplantation/Tree Transplant at the Industrial Yard.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/tree-transplantation/tt-building-1280.webp",
+  "new": "assets/img/services/tree-transplantation/tree-transplantation-tree-beside-glass-building.webp",
+  "source": "services/tree-transplantation/Glass High-Rise Framed by Trees.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/tree-transplantation/tt-team-1280.webp",
+  "new": "assets/img/services/tree-transplantation/tree-transplantation-workers-moving-tree.webp",
+  "source": "services/tree-transplantation/Workers Transplanting a Tree by Glass Building.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/tree-transplantation/tt-palm-1280.webp",
+  "new": "assets/img/services/tree-transplantation/tree-transplantation-palm-relocation-construction-site.webp",
+  "source": "services/tree-transplantation/Palm Tree Relocation at Construction Site.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/irrigation/irrigation-lawn-1280.webp",
+  "new": "assets/img/services/irrigation/irrigation-sprinkler-lawn-watering.webp",
+  "source": "services/irrigation/Tropical Garden with Sparkling Sprinklers.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/services/plant-nursery/nursery-stock-1280.webp",
+  "new": "assets/img/services/plant-nursery/plant-nursery-stock.webp",
+  "source": "plant-nursery/nursery-stock-1280.webp",
+  "how": "kept-webp"
+ },
+ {
+  "old": "assets/img/services/plant-nursery/nursery-farm-1280.webp",
+  "new": "assets/img/services/plant-nursery/plant-nursery-karjat-farm.webp",
+  "source": "services/plant-nursery/Rustic Farm Bridge Beneath Mountain Ridge.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/general/garden-flowers-1280.webp",
+  "new": "assets/img/general/softscape-seasonal-flower-beds.webp",
+  "source": "general/Vibrant Geometric Garden Under Blue Skies.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/general/garden-river-1280.webp",
+  "new": "assets/img/general/landscape-riverfront-promenade-garden.webp",
+  "source": "general/Aerial Urban Parkway and River Landscape.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/general/garden-sandstone-1280.webp",
+  "new": "assets/img/general/landscape-sandstone-court-garden.webp",
+  "source": "general/Geometric Courtyard Garden in Daylight.png",
+  "how": "png"
+ },
+ {
+  "old": "assets/img/general/garden-bungalow-1280.webp",
+  "new": "assets/img/general/softscape-bungalow-lawn-seating.webp",
+  "source": "general/Sunlit Modern Garden Retreat.png",
+  "how": "png"
+ }
+]
