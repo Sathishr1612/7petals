@@ -968,3 +968,7 @@ a.v2-chip:hover { background: var(--f-800); color: #fff; border-color: var(--f-8
 /* Clients strip: the logo list is already repeated twice inside one track, so scroll half its width (no blank gap before it restarts) */
 @keyframes marquee-half { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee-container .marquee-content:only-child { animation-name: marquee-half; }
+
+/* footer headings: plain small caps, no gradient underline */
+.v2-footer h3::after { display: none; }
+.v2-footer h3 { padding-bottom: 0; margin-bottom: 1.15rem; }

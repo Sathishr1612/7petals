@@ -33,7 +33,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://7petals.in/index.html"},{"@type":"ListItem","position":2,"name":"Services","item":"https://7petals.in/services.html"},{"@type":"ListItem","position":3,"name":"Hardscape & Civil Finishing"}]}</script>
 </head>
 
-<body>
+<body class="page-service">
 
   <!-- Custom Cursor Micro-Interaction -->
   <div class="cursor-dot"></div>
@@ -59,7 +59,7 @@
   <section class="section-padding ">
     <div class="container">
       <div class="row g-5 align-items-center">
-        <div class="col-lg-5 reveal-on-scroll"><div class="inner-compose cv-3"><div class="inner-img"><img src="assets/img/projects/seawoods-ambedkar-garden/seawoods-ambedkar-garden-epdm-pathway-kerb.webp" width="1280" height="738" alt="Red EPDM pathway with kerb edging through planting at Ambedkar Garden, Seawoods" loading="lazy" decoding="async"></div><figure class="inner-compose-ring"><img src="assets/img/services/hardscape/hardscape-led-lit-seating.webp" alt="" width="1280" height="768" loading="lazy" decoding="async"></figure><div class="inner-compose-badge"><strong>2014</strong><span>Established, Mumbai</span></div></div></div>
+        <div class="col-lg-5 reveal-on-scroll"><div class="inner-compose cv-9"><div class="inner-img"><img src="assets/img/services/hardscape/hardscape-epdm-play-area.webp" width="1280" height="960" alt="Green EPDM play area with a wooden play structure and trees in an apartment courtyard" loading="lazy" decoding="async"></div><figure class="inner-compose-ring"><img src="assets/img/services/hardscape/hardscape-water-body-rcc-bridge.webp" alt="" width="1280" height="960" loading="lazy" decoding="async"></figure><div class="inner-compose-badge"><strong>2014</strong><span>Established, Mumbai</span></div></div></div>
         <div class="col-lg-7 reveal-on-scroll delay-1">
           <div class="services-eyebrow mb-3">HARDSCAPE &amp; CIVIL FINISHING</div>
           <h2 class="heading-editorial-sm">Built to Perform. Finished to Last.</h2>
@@ -72,14 +72,15 @@
     </div>
   </section>
 
-  <section class="section-padding bg-alt">
+  <section class="section-padding bg-alt work-pics">
     <div class="container">
-      <div class="max-w-700 mb-5 reveal-on-scroll">
+      <div class="max-w-700 wp-head reveal-on-scroll">
         <div class="services-eyebrow mb-3">OUR WORK IN PICTURES</div>
         <h2 class="heading-editorial">Hardscape<br><em>We Have Executed</em></h2>
         <p class="subheading-editorial">Surfaces and structures from our own project files, each one built on site by the 7 Petals team.</p>
       </div>
-      <div class="row g-4">
+      <div class="wp-controls"><button type="button" class="wp-prev" aria-label="Previous work"><i class="bi bi-arrow-left"></i></button><button type="button" class="wp-next" aria-label="Next work"><i class="bi bi-arrow-right"></i></button></div>
+      <div class="row g-4" data-mo-skip tabindex="0" aria-label="Hardscape work, scroll sideways">
         <div class="col-md-6 col-lg-4 reveal-on-scroll delay-0"><article class="inner-card"><div class="inner-card-img"><img src="assets/img/projects/piramal-vaikunth/piramal-vaikunth-entrance-signage-planting.webp" width="1280" height="720" alt="Flower bed around the Piramal Vaikunth entrance sign with a cobble-paved driveway" loading="lazy" decoding="async"></div><div class="inner-card-body"><h3>Kerb &amp; cobble stone</h3><p class="mb-0">Kerb stone edging with cobble-paved driveways and entrance bays.</p></div></article></div>
         <div class="col-md-6 col-lg-4 reveal-on-scroll delay-1"><article class="inner-card"><div class="inner-card-img"><img src="assets/img/services/hardscape/hardscape-grass-paver.webp" width="1280" height="720" alt="River-stone grass paver surface with grass growing between stones" loading="lazy" decoding="async"></div><div class="inner-card-body"><h3>Grass paver</h3><p class="mb-0">River-stone grass paver surfaces that stay permeable and green.</p></div></article></div>
         <div class="col-md-6 col-lg-4 reveal-on-scroll delay-2"><article class="inner-card"><div class="inner-card-img"><img src="assets/img/projects/seawoods-ambedkar-garden/seawoods-ambedkar-garden-epdm-pathway-kerb.webp" width="1280" height="738" alt="Red EPDM pathway with kerb edging through planting at Ambedkar Garden, Seawoods" loading="lazy" decoding="async"></div><div class="inner-card-body"><h3>EPDM pathways</h3><p class="mb-0">Coloured EPDM pathways with kerb edging for walking and jogging tracks.</p></div></article></div>
@@ -90,8 +91,55 @@
         <div class="col-md-6 col-lg-4 reveal-on-scroll delay-1"><article class="inner-card"><div class="inner-card-img"><img src="assets/img/services/hardscape/hardscape-pergola-seating.webp" width="1162" height="1354" alt="Green steel pergola with benches on a paved base" loading="lazy" decoding="async"></div><div class="inner-card-body"><h3>Pergolas &amp; shelters</h3><p class="mb-0">Fabricated pergolas and shelters with paved bases and electrical works.</p></div></article></div>
         <div class="col-md-6 col-lg-4 reveal-on-scroll delay-2"><article class="inner-card"><div class="inner-card-img"><img src="assets/img/services/hardscape/hardscape-coloured-epdm-playground.webp" width="1280" height="799" alt="Bright coloured EPDM playground surface with play structure" loading="lazy" decoding="async"></div><div class="inner-card-body"><h3>Play surfaces</h3><p class="mb-0">Coloured EPDM surfaces for playgrounds and courts.</p></div></article></div>
       </div>
+      <div class="wp-cta"><a href="contact.html" class="btn-editorial btn-editorial-primary"><span>DISCUSS YOUR PROJECT</span><i class="bi bi-arrow-right"></i></a></div>
     </div>
   </section>
+  <script>
+    (function () {
+      var sec = document.querySelector(".work-pics"); if (!sec) return;
+      var row = sec.querySelector(".row"), prev = sec.querySelector(".wp-prev"), next = sec.querySelector(".wp-next");
+      function step(d) { var c = row.querySelector("[class*=col-]"); row.scrollBy({ left: d * (c.offsetWidth + 20), behavior: "smooth" }); }
+      function update() {
+        var max = row.scrollWidth - row.clientWidth;
+        prev.disabled = row.scrollLeft < 4; next.disabled = row.scrollLeft > max - 4;
+      }
+      prev.addEventListener("click", function () { step(-1); });
+      next.addEventListener("click", function () { step(1); });
+      row.addEventListener("scroll", update, { passive: true });
+      window.addEventListener("resize", update);
+      row.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") { step(1); e.preventDefault(); }
+        if (e.key === "ArrowLeft") { step(-1); e.preventDefault(); }
+      });
+      /* mouse drag (touch already scrolls natively) */
+      var down = false, sx = 0, sl = 0;
+      row.addEventListener("pointerdown", function (e) { if (e.pointerType !== "mouse") return; down = true; sx = e.clientX; sl = row.scrollLeft; row.classList.add("is-drag"); });
+      window.addEventListener("pointermove", function (e) { if (down) row.scrollLeft = sl - (e.clientX - sx); });
+      window.addEventListener("pointerup", function () { down = false; row.classList.remove("is-drag"); });
+      update();
+
+      /* gentle autoplay: moves one card every few seconds, pauses on hover, touch, focus or when off screen */
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce) {
+        var visible = false, paused = false, timer = null, resumeAt = 0;
+        function autoplay() {
+          if (!visible || paused || Date.now() < resumeAt) return;
+          var max = row.scrollWidth - row.clientWidth;
+          if (row.scrollLeft >= max - 4) row.scrollTo({ left: 0, behavior: "smooth" }); else step(1);
+        }
+        function pause(ms) { resumeAt = Date.now() + (ms || 0); }
+        new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }, { threshold: 0.35 }).observe(sec);
+        row.addEventListener("mouseenter", function () { paused = true; });
+        row.addEventListener("mouseleave", function () { paused = false; pause(1500); });
+        row.addEventListener("focusin", function () { paused = true; });
+        row.addEventListener("focusout", function () { paused = false; });
+        row.addEventListener("touchstart", function () { pause(9000); }, { passive: true });
+        prev.addEventListener("click", function () { pause(9000); });
+        next.addEventListener("click", function () { pause(9000); });
+        timer = setInterval(autoplay, 3800);
+      }
+    })();
+  </script>
 
 
 
@@ -118,7 +166,7 @@
         <div class="services-eyebrow mb-3">PHOTO GALLERY</div>
         <h2 class="heading-editorial">Hardscape &amp; Civil Finishing<br><em>in the Field</em></h2>
       </div>
-      <div class="gallery-grid inner-gallery g-n8">
+      <div class="gallery-grid inner-gallery g-n7">
         <div class="gallery-item" data-category="hardscape"><div class="gallery-img-wrap"><img src="assets/img/projects/seawoods-ambedkar-garden/seawoods-ambedkar-garden-epdm-pathway-kerb.webp" width="1280" height="738" alt="Red EPDM pathway with kerb edging through planting at Ambedkar Garden, Seawoods" loading="lazy" decoding="async" class="gallery-img">
           <div class="gallery-overlay"><div class="gallery-overlay-content"><i class="bi bi-zoom-in"></i><h4 class="gallery-title">Ambedkar Garden, Seawoods: EPDM pathway with kerb</h4></div></div></div></div>
         <div class="gallery-item" data-category="hardscape"><div class="gallery-img-wrap"><img src="assets/img/services/hardscape/hardscape-led-lit-seating.webp" width="1280" height="768" alt="Curved seating wall with warm LED lighting at night" loading="lazy" decoding="async" class="gallery-img">
@@ -131,8 +179,6 @@
           <div class="gallery-overlay"><div class="gallery-overlay-content"><i class="bi bi-zoom-in"></i><h4 class="gallery-title">EPDM pathway and trellis</h4></div></div></div></div>
         <div class="gallery-item" data-category="hardscape"><div class="gallery-img-wrap"><img src="assets/img/projects/g-corp-tech-park/g-corp-tech-park-paver-block-laying.webp" width="868" height="1156" alt="Paver block road being laid beside the office buildings at G Corp Tech Park, Thane" loading="lazy" decoding="async" class="gallery-img">
           <div class="gallery-overlay"><div class="gallery-overlay-content"><i class="bi bi-zoom-in"></i><h4 class="gallery-title">G Corp Tech Park: Paver block laying</h4></div></div></div></div>
-        <div class="gallery-item" data-category="hardscape"><div class="gallery-img-wrap"><img src="assets/img/services/hardscape/hardscape-skating-rink-railing.webp" width="780" height="1040" alt="Coloured EPDM skating rink with steel railing" loading="lazy" decoding="async" class="gallery-img">
-          <div class="gallery-overlay"><div class="gallery-overlay-content"><i class="bi bi-zoom-in"></i><h4 class="gallery-title">Skating rink with railing</h4></div></div></div></div>
         <div class="gallery-item" data-category="hardscape"><div class="gallery-img-wrap"><img src="assets/img/projects/rustomjee-crown/rustomjee-crown-sculpted-stone-seating.webp" width="1280" height="960" alt="Layered stone seating steps set into a sculpted podium landscape at Rustomjee Crown" loading="lazy" decoding="async" class="gallery-img">
           <div class="gallery-overlay"><div class="gallery-overlay-content"><i class="bi bi-zoom-in"></i><h4 class="gallery-title">Rustomjee Crown: Sculpted stone seating</h4></div></div></div></div>
       </div>

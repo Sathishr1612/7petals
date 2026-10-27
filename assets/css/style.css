@@ -1507,7 +1507,7 @@ img {
 }
 
 .mobile-nav-item-dropdown.active .mobile-dropdown-submenu {
-  max-height: 560px;
+  max-height: 1100px;
   opacity: 1;
   margin-top: 6px;
   margin-bottom: 4px;

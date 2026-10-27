@@ -2242,3 +2242,364 @@ html, body { overflow-x: clip; }
 
 /* Banner photo must fill the whole banner (".v2 img { height: auto }" was shrinking it to the top part on narrow screens) */
 .v2 .about-page-hero .about-page-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; }
+
+/* 9 · soft green block offset behind a rounded photo, with a pink corner bracket */
+.inner-compose.cv-9 { padding: 0 34px 38px 0; }
+.inner-compose.cv-9::before { inset: auto; top: 34px; left: 34px; right: 0; bottom: 0; width: auto; height: auto; aspect-ratio: auto; border-radius: 30px; background: linear-gradient(160deg, #dcefe1, #eef7f0); border: 0; }
+.inner-compose.cv-9::after { right: auto; top: -14px; left: -14px; width: 84px; height: 84px; background: none; border-top: 4px solid var(--brand-magenta); border-left: 4px solid var(--brand-magenta); border-radius: 26px 0 0 0; }
+.inner-compose.cv-9 .inner-img { border-radius: 30px; box-shadow: 0 24px 50px -18px rgba(26, 26, 26, 0.35); }
+.inner-compose.cv-9 .inner-compose-ring { border-radius: 24px; }
+
+/* ==========================================================================
+   Hardscape page, "Our work in pictures" only: swipeable slider (heading + arrows on one line, progress bar underneath)
+   ========================================================================== */
+.work-pics .container { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 24px; align-items: end; }
+.work-pics .wp-head { grid-column: 1; margin-bottom: 30px; }
+.work-pics .wp-controls { grid-column: 2; margin: 0 0 34px; display: flex; gap: 10px; }
+.work-pics .wp-controls button { width: 48px; height: 48px; border: 1.5px solid #a8368c; border-radius: 50%; background: transparent; color: #a8368c; font-size: 1.1rem; display: grid; place-items: center; cursor: pointer; transition: background 0.25s ease, color 0.25s ease, opacity 0.25s ease; }
+.work-pics .wp-controls button:hover:not(:disabled) { background: #a8368c; color: #fff; }
+.work-pics .wp-controls button:disabled { opacity: 0.3; cursor: default; }
+.work-pics .row { grid-column: 1 / -1; }
+
+.work-pics .row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin: 0 calc((100vw - 100%) / -2) 0 0;      /* phones: runs off the right edge so the next card peeks in */
+  padding: 4px calc((100vw - 100%) / 2) 22px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  cursor: grab;
+}
+.work-pics .row::-webkit-scrollbar { display: none; }
+.work-pics .row.is-drag { cursor: grabbing; scroll-snap-type: none; scroll-behavior: auto; user-select: none; }
+.work-pics .row > [class*="col-"] { flex: 0 0 min(400px, 78vw); width: auto; max-width: none; padding: 0; margin: 0; scroll-snap-align: start; }
+.work-pics .inner-card { height: auto; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; overflow: visible; transform: none; }
+.work-pics .inner-card:hover { transform: none; box-shadow: none; }
+.work-pics .inner-card-img { aspect-ratio: 4 / 3.2; border-radius: 22px; overflow: hidden; box-shadow: 0 18px 34px -24px rgba(40, 20, 40, 0.5); }
+.work-pics .inner-card-img::after { display: none; }
+.work-pics .inner-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; -webkit-user-drag: none; pointer-events: none; }
+.work-pics .inner-card:hover .inner-card-img img { transform: scale(1.05); }
+.work-pics .inner-card-body { padding: 18px 4px 0; }
+.work-pics .inner-card-body h3 { margin: 0 0 6px; font-size: 1.22rem; color: var(--text-primary); }
+.work-pics .inner-card:hover .inner-card-body h3 { color: var(--brand-magenta); }
+.work-pics .inner-card-body p { margin: 0; font-size: 0.97rem; line-height: 1.6; color: #55665b; }
+
+/* desktop and tablet: whole cards only (3 across, 2 on tablets), nothing cut off at the edge */
+@media (min-width: 768px) {
+  .work-pics .row { margin: 0; padding: 4px 0 40px; }
+  .work-pics .row > [class*="col-"] { flex: 0 0 calc((100% - 20px) / 2); }
+}
+@media (min-width: 992px) {
+  .work-pics .row > [class*="col-"] { flex: 0 0 calc((100% - 40px) / 3); }
+}
+
+/* hand-cut feel: leaf-shaped photos that alternate, and every other card sits a little lower */
+.work-pics .row > [class*="col-"]:nth-child(odd) .inner-card-img { border-radius: 72px 22px 22px 22px; }
+.work-pics .row > [class*="col-"]:nth-child(even) .inner-card-img { border-radius: 22px 22px 72px 22px; }
+@media (min-width: 768px) {
+  .work-pics .row > [class*="col-"]:nth-child(even) .inner-card { margin-top: 30px; }
+}
+
+@media (max-width: 767px) {
+  .work-pics .container { column-gap: 12px; }
+  .work-pics .wp-head { grid-column: 1 / -1; margin-bottom: 16px; }
+  .work-pics .wp-controls { grid-column: 1 / -1; justify-self: end; margin-bottom: 18px; }
+  .work-pics .wp-head .subheading-editorial { font-size: 0.95rem; }
+  .work-pics .wp-controls { gap: 8px; }
+  .work-pics .wp-controls button { width: 42px; height: 42px; }
+  .work-pics .row { gap: 14px; }
+  .work-pics .row > [class*="col-"] { flex-basis: 76vw; }
+  .work-pics .inner-card-img { aspect-ratio: 4 / 3.4; }
+  .work-pics .row > [class*="col-"]:nth-child(odd) .inner-card-img { border-radius: 52px 18px 18px 18px; }
+  .work-pics .row > [class*="col-"]:nth-child(even) .inner-card-img { border-radius: 18px 18px 52px 18px; }
+  .work-pics .inner-card-body { padding-top: 14px; }
+  .work-pics .inner-card-body h3 { font-size: 1.12rem; }
+  .work-pics .inner-card-body p { font-size: 0.92rem; }
+}
+@media (hover: none) { .work-pics .row { cursor: auto; } }
+
+/* Hardscape slider captions: small numbered label, stronger title, calmer description */
+.work-pics .row { counter-reset: wp; }
+.work-pics .inner-card { counter-increment: wp; }
+.work-pics .inner-card-body { padding: 20px 4px 0; }
+.work-pics .inner-card-body::before {
+  content: counter(wp, decimal-leading-zero) "  /  09";
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--brand-magenta);
+}
+.work-pics .inner-card-body h3 { margin: 0 0 8px; font-size: 1.36rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.2; color: #14261b; }
+.work-pics .inner-card-body p { font-size: 0.96rem; line-height: 1.65; color: #4d5f54; max-width: 34ch; }
+@media (max-width: 767px) {
+  .work-pics .inner-card-body { padding-top: 16px; }
+  .work-pics .inner-card-body::before { font-size: 0.7rem; margin-bottom: 8px; }
+  .work-pics .inner-card-body h3 { font-size: 1.2rem; }
+  .work-pics .inner-card-body p { font-size: 0.92rem; max-width: none; }
+}
+.work-pics .inner-card-body::before { content: none; display: none; }
+.work-pics .inner-card-body { padding-top: 18px; }
+
+/* Hardscape slider polish: tighter bottom, calmer stagger, button after the slider */
+.work-pics.section-padding { padding-bottom: clamp(48px, 5vw, 72px); }
+.work-pics .row { padding-bottom: 14px; }
+@media (min-width: 768px) {
+  .work-pics .row { padding-bottom: 14px; }
+  .work-pics .row > [class*="col-"]:nth-child(even) .inner-card { margin-top: 18px; }
+}
+.work-pics .wp-cta { grid-column: 1 / -1; display: flex; justify-content: center; margin-top: 26px; }
+@media (max-width: 767px) { .work-pics .wp-cta { margin-top: 18px; } .work-pics .wp-cta .btn-editorial { width: 100%; justify-content: center; } }
+
+/* Hardscape slider: white card behind the photo and its caption */
+.work-pics .inner-card {
+  background: #fff;
+  border-radius: 28px;
+  padding: 10px 10px 24px;
+  box-shadow: 0 18px 38px -26px rgba(60, 30, 55, 0.4);
+}
+.work-pics .inner-card-img { box-shadow: none; }
+.work-pics .inner-card-body { padding: 18px 14px 0; }
+@media (max-width: 767px) {
+  .work-pics .inner-card { border-radius: 22px; padding: 8px 8px 20px; }
+  .work-pics .inner-card-body { padding: 14px 10px 0; }
+}
+.work-pics .row { padding-bottom: 40px; }
+.work-pics .wp-cta { margin-top: 0; }
+
+/* Gallery captions on photos: always white and readable (a global heading colour was turning them dark green) */
+.gallery-grid.inner-gallery .gallery-overlay { background: linear-gradient(to top, rgba(8, 14, 10, 0.82) 0%, rgba(8, 14, 10, 0.45) 45%, rgba(8, 14, 10, 0) 80%); }
+.gallery-grid.inner-gallery .gallery-title,
+.gallery-grid.inner-gallery .gallery-overlay h3,
+.gallery-grid.inner-gallery .gallery-overlay h4 { color: #fff !important; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55); font-size: 1.05rem; line-height: 1.3; }
+.gallery-grid.inner-gallery .gallery-overlay-content i { color: #fff; }
+@media (max-width: 767px) {
+  .gallery-grid.inner-gallery .gallery-title { font-size: 0.92rem; }
+  .gallery-grid.inner-gallery .gallery-overlay { padding: 12px; }
+}
+
+/* Vertical Gardens: tall photo shown as a rounded rectangle so the wall and pergola aren't squeezed into an oval */
+.page-service .inner-compose.cv-9 .inner-img img { aspect-ratio: 4 / 5; object-position: 40% center; }
+
+/* 10 · clean tall photo: white keyline, deep soft shadow, a green panel peeking out behind, dotted accent */
+.inner-compose.cv-10 { padding: 0 44px 44px 0; }
+.inner-compose.cv-10::before {
+  inset: auto; top: 44px; left: 44px; right: 0; bottom: 0; width: auto; height: auto; aspect-ratio: auto;
+  border-radius: 34px; border: 0;
+  background: linear-gradient(160deg, #cfe8d6 0%, #e6f3ea 100%);
+}
+.inner-compose.cv-10::after {
+  right: auto; left: -18px; top: 38%; width: 70px; height: 150px;
+  background-image: radial-gradient(rgba(168, 54, 140, 0.4) 1.6px, transparent 2px); background-size: 14px 14px;
+}
+.inner-compose.cv-10 .inner-img { border: 8px solid #fff; border-radius: 30px; box-shadow: 0 30px 60px -22px rgba(30, 40, 30, 0.45); }
+.inner-compose.cv-10 .inner-img img { aspect-ratio: 4 / 5; object-position: 42% center; }
+.inner-compose.cv-10 .inner-compose-ring { width: 36%; right: 2px; bottom: 4px; border-width: 7px; }
+.inner-compose.cv-10 .inner-compose-badge { left: -16px; bottom: 70px; }
+@media (max-width: 575px) { .inner-compose.cv-10 { padding: 0 24px 28px 0; } .inner-compose.cv-10::before { top: 24px; left: 24px; } }
+
+/* "Where ... work" blocks (4 service pages): same soft pink band, items as plain pills, identical on every page */
+.where-block .row { align-items: center; }
+.where-block .inner-checklist { margin: 0; }
+
+/* About "Why choose us": easier-to-read list, button after it, list fills the card's height */
+#bento .pillar-title { font-size: 1.14rem; color: #14261b; }
+#bento .pillar-desc { font-size: 0.98rem; line-height: 1.65; color: #4a5b50; }
+#bento .why-pillar-card::before { -webkit-text-stroke: 2px rgba(168, 54, 140, 0.7); }
+#bento .why-pillars-column { align-content: space-between; }
+#bento .why-cta { grid-column: 1 / -1; display: flex; padding-top: 10px; }
+@media (max-width: 991px) { #bento .why-cta { justify-content: flex-start; } }
+@media (max-width: 575px) { #bento .why-cta .btn-editorial { width: 100%; justify-content: center; } }
+
+/* About "Why choose us" v4: the six reasons sit on one white panel as tall as the photo card, solid number badges, button inside the panel */
+#bento .why-pillars-column {
+  padding: clamp(24px, 2.6vw, 38px);
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 24px 50px -34px rgba(60, 30, 55, 0.4);
+  align-content: space-between;
+  gap: 0 clamp(20px, 2.4vw, 36px);
+}
+#bento .why-pillar-card { padding: 22px 0; border-top: 1px solid #f0e6ec; }
+#bento .why-pillar-card:nth-child(-n+2) { border-top: 0; padding-top: 4px; }
+#bento .why-pillar-card::before {
+  content: counter(why, decimal-leading-zero);
+  display: grid !important;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  min-width: 0;
+  border-radius: 50%;
+  background: #a8368c;
+  color: #fff;
+  -webkit-text-stroke: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+#bento .why-pillar-card:hover::before { background: #782662; color: #fff; -webkit-text-stroke: 0; }
+#bento .why-pillar-card::after { display: none; }
+#bento .why-cta { padding-top: 22px; border-top: 1px solid #f0e6ec; }
+@media (max-width: 575px) { #bento .why-pillars-column { padding: 20px 18px; border-radius: 22px; } #bento .why-pillar-card:nth-child(2) { border-top: 1px solid #f0e6ec; padding-top: 22px; } }
+
+/* "Why choose us" final tune: panel stands out from the page, text gets more width, no one-word last lines */
+#bento .why-choose-grid { grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); }
+#bento .why-pillars-column { padding: 30px 30px 28px; gap: 0 28px; box-shadow: 0 30px 60px -30px rgba(60, 30, 55, 0.5), 0 0 0 1px rgba(168, 54, 140, 0.06); }
+#bento .why-pillar-card { column-gap: 14px; padding: 20px 0; }
+#bento .why-pillar-card::before { width: 38px; height: 38px; font-size: 0.82rem; }
+#bento .pillar-title { text-wrap: balance; }
+#bento .pillar-desc { text-wrap: pretty; max-width: none; }
+
+/* "Why choose us": soft photo behind the whole section (white wash keeps the text clear) */
+#bento.why-choose-section {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(253, 249, 252, 0.93) 0%, rgba(250, 243, 248, 0.9) 55%, rgba(253, 249, 252, 0.95) 100%),
+    url('../img/general/landscape-riverfront-promenade-garden.webp') center / cover no-repeat;
+}
+#bento.why-choose-section::before, #bento.why-choose-section::after { display: none; }
+#bento .why-pillars-column { background: rgba(255, 255, 255, 0.96); }
+
+/* give the photo card back a little width so the heading and "3 acre" don't wrap */
+#bento .why-choose-grid { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); }
+#bento .why-spotlight-title { font-size: clamp(1.55rem, 1.1rem + 1.1vw, 2.05rem); }
+#bento .why-mini-stats .mini-stat-num { white-space: nowrap; }
+#bento .why-choose-grid { grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr); }
+
+/* "Why choose us": background photo removed (back to the soft plain band); the photo card itself gets a designed frame */
+#bento.why-choose-section { background: linear-gradient(180deg, #ffffff 0%, #fbf6fa 100%); }
+#bento .why-pillars-column { background: #fff; }
+#bento .why-spotlight-card {
+  position: relative;
+  overflow: visible;
+  border-radius: 30px;
+  box-shadow: none;
+  background: transparent;
+}
+#bento .why-spotlight-card::before {            /* soft green panel offset behind the photo */
+  content: "";
+  position: absolute;
+  inset: 22px -18px -18px 22px;
+  border-radius: 34px;
+  background: linear-gradient(160deg, #d8ecdd, #ecf6ef);
+  z-index: 0;
+}
+#bento .why-spotlight-card::after {             /* pink corner accent, top left */
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 78px;
+  height: 78px;
+  border-top: 4px solid #a8368c;
+  border-left: 4px solid #a8368c;
+  border-radius: 26px 0 0 0;
+  z-index: 3;
+}
+#bento .why-spotlight-bg,
+#bento .why-spotlight-overlay,
+#bento .why-spotlight-content { border-radius: 30px; }
+#bento .why-spotlight-bg { z-index: 1; box-shadow: 0 30px 60px -26px rgba(30, 20, 30, 0.55); }
+#bento .why-spotlight-overlay { z-index: 2; }
+#bento .why-spotlight-content { z-index: 3; }
+@media (max-width: 991px) {
+  #bento .why-spotlight-card::before { inset: 16px -10px -10px 16px; }
+}
+
+/* Project fact sheet: plain, quiet details row (no box, no coloured edge), thin lines between the facts */
+.inner-meta {
+  gap: 0;
+  padding: 6px 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid rgba(60, 30, 55, 0.16);
+  border-bottom: 1px solid rgba(60, 30, 55, 0.16);
+  border-radius: 0;
+  box-shadow: none;
+}
+.inner-meta > div { padding: 22px 0; }
+.inner-meta dt { margin: 0 0 6px; font-size: 0.72rem; letter-spacing: 0.16em; color: #8a6a80; }
+.inner-meta dd { margin: 0; font-size: 1.12rem; font-weight: 700; line-height: 1.45; color: #14261b; }
+@media (min-width: 768px) {
+  .inner-meta > div { padding: 22px 28px; }
+  .inner-meta > div:first-child { padding-left: 0; }
+  .inner-meta > div + div { border-left: 1px solid rgba(60, 30, 55, 0.14); }
+}
+@media (max-width: 767px) {
+  .inner-meta > div + div { border-top: 1px solid rgba(60, 30, 55, 0.12); }
+  .inner-meta > div { padding: 16px 0; }
+}
+/* give the long "Scope of work" the widest column so it wraps in two lines, not four */
+@media (min-width: 768px) {
+  .inner-meta { grid-template-columns: repeat(calc(var(--cols, 4) - 1), minmax(0, 0.7fr)) minmax(0, 1.7fr); }
+}
+
+/* ==========================================================================
+   Contact page: quieter form card, roomier contact list, map
+   ========================================================================== */
+.page-contact .inner-form { border: 0; border-top: 0; border-radius: 28px; box-shadow: 0 30px 60px -36px rgba(60, 30, 55, 0.45); padding: clamp(26px, 4vw, 48px); }
+.page-contact .inner-form label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b5a66; }
+.page-contact .inner-form .form-control,
+.page-contact .inner-form .form-select { background: #f6f3f5; border: 1.5px solid transparent; border-radius: 12px; padding: 13px 16px; }
+.page-contact .inner-form .form-control:focus,
+.page-contact .inner-form .form-select:focus { background: #fff; border-color: #a8368c; box-shadow: 0 0 0 4px rgba(168, 54, 140, 0.12); }
+.page-contact .inner-contact-list { gap: 0; margin: 28px 0 0; }
+.page-contact .inner-contact-list li { align-items: center; gap: 18px; padding: 18px 0; border-top: 1px solid rgba(60, 30, 55, 0.12); }
+.page-contact .inner-contact-list li:last-child { border-bottom: 1px solid rgba(60, 30, 55, 0.12); }
+.page-contact .inner-contact-list li > i { flex: none; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: #f6e7f1; font-size: 1.15rem; }
+.page-contact .inner-contact-list li:nth-child(2) > i { background: #e3f6ec; color: #128c5a; }
+.page-contact .inner-contact-list strong { margin-bottom: 2px; }
+
+.contact-map .map-wrap { position: relative; border-radius: 28px; overflow: hidden; box-shadow: 0 30px 60px -34px rgba(60, 30, 55, 0.5); background: #e9e4e8; }
+.contact-map .map-wrap iframe { display: block; width: 100%; height: clamp(380px, 46vw, 520px); border: 0; filter: saturate(0.9) contrast(1.02); }
+.contact-map .map-card { position: absolute; left: clamp(16px, 3vw, 36px); bottom: clamp(16px, 3vw, 36px); max-width: 340px; padding: 24px 26px; border-radius: 22px; background: #fff; box-shadow: 0 24px 50px -22px rgba(30, 20, 30, 0.55); }
+.contact-map .map-card h3 { margin: 0 0 8px; font-size: 1.2rem; font-weight: 800; color: #14261b; }
+.contact-map .map-card p { margin: 0 0 4px; line-height: 1.55; color: #4a5b50; }
+.contact-map .map-card .map-sub { margin-bottom: 16px; font-size: 0.9rem; color: #7a6a76; }
+@media (max-width: 767px) {
+  .contact-map .map-wrap { border-radius: 22px; }
+  .contact-map .map-wrap iframe { height: 320px; }
+  .contact-map .map-card { position: static; max-width: none; border-radius: 0; box-shadow: none; padding: 20px 20px 22px; }
+  .contact-map .map-card .btn-editorial { width: 100%; justify-content: center; }
+}
+
+/* About "What we do": left-aligned cards, one line of description, "Learn more" link, equal heights */
+.capabilities-grid .capability-card { align-items: flex-start; text-align: left; padding: 26px 24px 22px; min-height: 0; height: 100%; }
+.capabilities-grid .capability-icon-wrap { margin-bottom: 18px; }
+.capabilities-grid .capability-title { margin: 0 0 8px; font-size: 1.15rem; line-height: 1.25; text-align: left; color: #14261b; }
+.capabilities-grid .capability-desc { margin: 0 0 18px; font-size: 0.94rem; line-height: 1.55; color: #55665b; }
+.capabilities-grid .capability-more { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand-magenta); }
+.capabilities-grid .capability-more i { transition: transform 0.25s ease; }
+.capabilities-grid .capability-card:hover .capability-more i { transform: translateX(5px); }
+.capabilities-grid { align-items: stretch; }
+.capabilities-grid .capability-card { display: flex; flex-direction: column; }
+.capabilities-grid .capability-title { min-height: 2.5em; }
+@media (max-width: 767px) { .capabilities-grid .capability-title { min-height: 0; } }
+
+/* "Why choose us" on phones and tablets: stack (photo card first, then the white panel). Must come last to beat the desktop column rules above. */
+@media (max-width: 991px) {
+  #bento .why-choose-grid { grid-template-columns: minmax(0, 1fr); gap: 44px; }
+  #bento .why-spotlight-card { min-height: 460px; height: auto; margin: 0 18px 18px 0; }
+  #bento .why-pillars-column { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  #bento .why-pillars-column { grid-template-columns: minmax(0, 1fr); padding: 22px 20px; }
+  #bento .why-pillar-card:nth-child(2) { border-top: 1px solid #f0e6ec; padding-top: 22px; }
+  #bento .why-spotlight-card { min-height: 520px; margin-right: 12px; }
+  #bento .why-spotlight-card::before { inset: 14px -12px -12px 14px; }
+  #bento .why-spotlight-title { font-size: 1.5rem; }
+  #bento .why-spotlight-content .why-mini-stats { padding: 12px 14px; }
+  #bento .mini-stat-num { font-size: 1.25rem; }
+  #bento .mini-stat-text { font-size: 0.7rem; }
+  #bento .why-cta .btn-editorial { width: 100%; justify-content: center; }
+}
+
+/* Logo section button: centred on the page (global "p" max-width was pulling it left) */
+.trust-logos p.mt-5 { display: flex; justify-content: center; max-width: none; width: 100%; margin-left: 0; margin-right: 0; }
