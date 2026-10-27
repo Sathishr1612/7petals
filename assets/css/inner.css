@@ -2603,3 +2603,9 @@ html, body { overflow-x: clip; }
 
 /* Logo section button: centred on the page (global "p" max-width was pulling it left) */
 .trust-logos p.mt-5 { display: flex; justify-content: center; max-width: none; width: 100%; margin-left: 0; margin-right: 0; }
+
+/* Banner outline button ("Call ...", "All projects"): white text at rest, white fill + magenta text on hover.
+   The global button rules use !important, so these need it too (hover was white text on a white fill). */
+.about-page-hero .btn-editorial-outline { color: #fff !important; background-color: rgba(255, 255, 255, 0.08); border: 1.5px solid rgba(255, 255, 255, 0.8); box-shadow: none; }
+.about-page-hero .btn-editorial-outline:hover { background: #fff !important; color: #a8368c !important; border-color: #fff; box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.5); }
+.about-page-hero .btn-editorial-outline i { color: inherit; }

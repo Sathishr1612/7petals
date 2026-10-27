@@ -474,3 +474,11 @@
   .nav-links-wrapper > *,
   .nav-item-dropdown .dropdown-card { animation: none !important; }
 }
+
+/* Narrow desktops / landscape tablets (992 to 1149 px): the full menu plus the "Let's talk" button don't fit in the floating bar,
+   so the button steps aside here (it is still in the menu drawer and on the Contact page). */
+@media (min-width: 992px) and (max-width: 1149px) {
+  .header-wrapper .btn-editorial-cta { display: none !important; }
+  .nav-links-wrapper { gap: 18px; }
+  .nav-link-custom { font-size: 0.86rem; }
+}
